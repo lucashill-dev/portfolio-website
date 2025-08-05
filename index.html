@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Portfolio</title>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav>
+        <div class="left">
+            <a href="/">Lucas Hill</a>
+        </div>
+        <div class="right">
+            <a href="http://github.com" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+                <span>Github</span>
+            </a>
+
+            <a href="http://linkedin.com" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>
+            </a>
+
+            <a href="mailto:contact.lucashill@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+                <span>Email</span>
+            </a>
+
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero -->
+        <section class="hero-section">
+            <div class="text">
+                <h2>Hi, I'm Lucas 👋</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad impedit pariatur facilis similique, iusto quas alias, nesciunt molestiae autem aspernatur ducimus quod adipisci illo architecto non eum! A neque illum aliquid quibusdam iusto porro error laborum ipsa eaque dolore. Accusamus perspiciatis esse sed eos tempora quis eligendi dolorum odio inventore?</p>
+
+                <div class="links">
+                    <a href="#skills">
+                        <i class="fa-solid fa-code"></i>
+                        <span>Skills</span>
+                    </a>
+
+                    <a href="#testimony">
+                        <i class="fa-solid fa-pen"></i>
+                        <span>Testimony</span>
+                    </a>
+
+                    <a href="#contact">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>Contact</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="headshot">
+                <img src="images/hero-headshot.webp" alt="Lucas Hill Headshot">
+            </div>
+        </section>
+
+        <!-- Skills -->
+        <section id="skills" class="skills-section">
+            <h2>Skills</h2>
+            <div class="text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ullam quam rem beatae tempore, blanditiis cumque nisi optio vero voluptatem iusto consectetur, quas soluta ipsa, tenetur molestias. Ab, itaque ipsa.
+            </div>
+            <div class="cells">
+                <div class="cell">
+                    <img src="images/html-logo.webp" alt="HTML Logo">
+                    <span>HTML</span>
+                </div>
+
+                <div class="cell">
+                    <img src="images/css-logo.webp" alt="CSS Logo">
+                    <span>CSS</span>
+                </div>
+
+                <div class="cell">
+                    <img src="images/javascript-logo.webp" alt="Javascript Logo">
+                    <span>Javascript</span>
+                </div>
+
+                <div class="cell">
+                    <img src="images/node-logo.webp" alt="Node Logo">
+                    <span>Node.js</span>
+                </div>
+
+                <div class="cell">
+                    <img src="images/react-logo.webp" alt="React Logo">
+                    <span>React.js</span>
+                </div>
+            </div>
+
+
+        </section>
+
+        <!-- Testimony -->
+        <section id="testimony" class="testimony-section">
+            <h2>Testimony</h2>
+
+            <div class="group">
+                <div class="person-details">
+                    <img src="images/testimony-headshot.webp" alt="gordan ranmsay">
+                    <p>Gordan Ramsay</p>
+                    <p>Professional Chef and Food Critic</p>
+                </div>
+                <div class="text">
+                    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur quia laudantium placeat voluptates adipisci, accusantium sed ab dicta incidunt asperiores commodi! Velit quidem iusto amet alias sint. Fugiat suscipit commodi pariatur dicta ab quaerat fuga, quia ad sed consectetur. Accusamus, aliquid libero natus adipisci incidunt tempora aperiam modi earum delectus?"
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact" class="contact-section">
+            <h2>Contact</h2>
+            <div class="group">
+                <div class="text">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit rerum neque possimus corrupti facere quas tenetur dicta? Ullam nemo sed reiciendis doloremque commodi provident officiis eum eius corrupti corporis impedit nulla hic iste aut laborum distinctio dolorum quas veritatis, error dolor cum iure recusandae. Deleniti id iste velit animi eaque!
+                </div>
+
+                <form>
+                    <label for="name">Name</label>
+                    <input type="text" id="name">
+
+                    <label for="email">Email</label>
+                    <input type="text" id="email">
+
+                    <label for="message">Message</label>
+                    <textarea id="message" cols="30" rows="10"></textarea>
+
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
+    
+        </section>
+
+    </main>
+</body>
+</html>
