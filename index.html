@@ -3,69 +3,249 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Lucas Hill - CS + SE Student at UM-Flint. Building clean, efficient systems with focus on system design, architecture, and collaborative development.">
+    <meta name="keywords" content="Lucas Hill, Software Engineer, Web Developer, UM-Flint, Computer Science">
+    <meta name="author" content="Lucas Hill">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://lucashill.dev/">
+    <meta property="og:title" content="Lucas Hill - Portfolio">
+    <meta property="og:description" content="CS + SE Student at UM-Flint focused on building clean, efficient systems.">
+    <meta property="og:image" content="https://lucashill.dev/images/hero-headshot.webp">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://lucashill.dev/">
+    <meta property="twitter:title" content="Lucas Hill - Portfolio">
+    <meta property="twitter:description" content="CS + SE Student at UM-Flint focused on building clean, efficient systems.">
+    <meta property="twitter:image" content="https://lucashill.dev/images/hero-headshot.webp">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <link rel="stylesheet" href="styles.css">
 
-    <title>Portfolio</title>
+    <title>Lucas Hill - Portfolio</title>
 </head>
 <body>
-    <!-- NAVBAR -->
-    <nav>
-        <div class="left">
-            <a href="/">Lucas Hill</a>
-        </div>
-        <div class="right">
-            <a href="http://github.com/lucashill-dev" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-github"></i>
-                <span>Github</span>
-            </a>
+    <!-- Progress Indicator -->
+    <div class="progress-indicator" id="progress-indicator"></div>
+    
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
 
-            <a href="http://linkedin.com/in/lucashill-dev" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-linkedin"></i>
-                <span>LinkedIn</span>
-            </a>
+    <!-- Header / NAVBAR -->
+    <header>
+        <nav>
+            <div class="left">
+                <a href="/">Lucas Hill</a>
+            </div>
+            <div class="right">
+                <a href="https://github.com/lucashill-dev" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-github" aria-hidden="true"></i>
+                    <span>Github</span>
+                </a>
 
-            <a href="mailto:contact.lucashill@gmail.com">
-                <i class="fa-solid fa-envelope"></i>
-                <span>Email</span>
-            </a>
+                <a href="https://www.linkedin.com/in/lucashill-dev" target="_blank" rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin" aria-hidden="true"></i>
+                    <span>LinkedIn</span>
+                </a>
 
-        </div>
-    </nav>
+                <a href="mailto:contact.lucashill@gmail.com">
+                    <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                    <span>Email</span>
+                </a>
+
+            </div>
+        </nav>
+    </header>
 
     <main>
         <!-- Hero -->
         <section class="hero-section">
+            <!-- Animated Background -->
+            <div class="hero-background">
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                    <div class="shape shape-4"></div>
+                </div>
+            </div>
+            
             <div class="text">
-                <h2>Hey, I'm Lucas 👋</h2>
-                <p>I'm a CS + SE student at UM-Flint focused on building clean, efficient systems. I have experience in system design, architecture, and collaborative development, with a focus on clarity, performace, and real-world impact. I'm currently building a custom data visualization tool. </p>
+                <h2 class="hero-title">
+                    <span class="greeting">Hey, I'm Lucas</span>
+                    <span class="wave">👋</span>
+                </h2>
+                <p class="hero-description">I'm a Software Engineering student at UM-Flint with a 3.96 GPA, specializing in system design, software architecture, and Agile development. I have strong foundations in Java and C# with experience in full SDLC documentation and collaborative problem-solving.</p>
 
                 <div class="links">
-                    <a href="#skills">
-                        <i class="fa-solid fa-code"></i>
+                    <a href="#experience" aria-label="View Experience" class="cta-button secondary">
+                        <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                        <span>Experience</span>
+                    </a>
+
+                    <a href="#projects" aria-label="View Projects" class="cta-button secondary">
+                        <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+                        <span>Projects</span>
+                    </a>
+
+                    <a href="#skills" aria-label="View Skills" class="cta-button secondary">
+                        <i class="fa-solid fa-code" aria-hidden="true"></i>
                         <span>Skills</span>
                     </a>
 
-                    <a href="#testimony">
-                        <i class="fa-solid fa-pen"></i>
-                        <span>Testimony</span>
-                    </a>
-
-                    <a href="#contact">
-                        <i class="fa-solid fa-envelope"></i>
+                    <a href="#contact" aria-label="Contact Me" class="cta-button secondary">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
                         <span>Contact</span>
                     </a>
                 </div>
             </div>
 
             <div class="headshot">
-                <img src="images/hero-headshot.webp" alt="Lucas Hill Headshot">
+                <div class="headshot-container">
+                    <img src="images/hero-headshot.webp" alt="Lucas Hill Headshot" loading="eager">
+                    <div class="headshot-glow"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="experience-section">
+            <div class="experience-tabs" role="tablist" aria-label="Experience tabs">
+                <button id="tab-education" class="tab-button active" role="tab" aria-selected="true" aria-controls="education-timeline" data-tab="education">
+                    <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+                    <span>Education</span>
+                </button>
+                <button id="tab-work" class="tab-button" role="tab" aria-selected="false" aria-controls="work-timeline" data-tab="work">
+                    <i class="fa-solid fa-briefcase" aria-hidden="true"></i>
+                    <span>Experience</span>
+                </button>
+            </div>
+            
+            <div class="experience-content">
+                <!-- Education Timeline -->
+                <div class="timeline active" id="education-timeline" role="tabpanel" aria-labelledby="tab-education" tabindex="0">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-logo">
+                                <i class="fa-solid fa-university"></i>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-date">2022 - Present</span>
+                                <h3>University of Michigan - Flint</h3>
+                                <p class="timeline-role">Bachelor of Science, Double Major in Computer Science and Software Engineering</p>
+                            </div>
+                            <div class="timeline-description">
+                                <ul>
+                                    <li>Cumulative GPA: 3.96/4.0; Dean's List 2024-2025</li>
+                                    <li>Relevant Coursework: Data Structures, Software Engineering, Discrete Structures</li>
+                                    <li>Currently enrolled in Theory of Computation and Software Construction</li>
+                                    <li>Expected graduation: April 2028</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-logo">
+                                <i class="fa-solid fa-school"></i>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-date">2022 - 2023</span>
+                                <h3>Genesee Career Institute</h3>
+                                <p class="timeline-role">Game Programming</p>
+                            </div>
+                            <div class="timeline-description">
+                                <ul>
+                                    <li>Cumulative GPA: 4.0/4.0</li>
+                                    <li>Studied game design principles, logic structures, game theory, and development methodologies</li>
+                                    <li>Developed and edited games in C# with focus on level design and interactive elements</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Timeline -->
+                <div class="timeline" id="work-timeline" role="tabpanel" aria-labelledby="tab-work" tabindex="0" hidden>
+                    <div class="timeline-item">
+                        <div class="timeline-marker">
+                            <div class="timeline-logo">
+                                <i class="fa-solid fa-building"></i>
+                            </div>
+                        </div>
+                        <div class="timeline-content">
+                            <div class="timeline-header">
+                                <span class="timeline-date">Aug 2024 - Present</span>
+                                <h3>UM-Flint Recreation Center</h3>
+                                <p class="timeline-role">Assistant Facilities Supervisor</p>
+                            </div>
+                            <div class="timeline-description">
+                                <ul>
+                                    <li>Contributed to hiring process for professional staff by reviewing applications and conducting structured interviews</li>
+                                    <li>Oversaw day-to-day operations including opening/closing procedures and monitoring student staff</li>
+                                    <li>Diagnosed and resolved facility issues in real-time using systems-oriented approach</li>
+                                    <li>Gained hands-on experience with evaluation, collaboration, and decision-making in formal selection settings</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="projects-section">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fa-solid fa-file-alt"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Software Engineering Term Project</h3>
+                        <p>Collaborated in a 4-person team to produce 150+ pages of full SDLC documentation for a proposed client-facing application. Completed SRS, PMP, architectural design, and test plan documentation. Led estimation and task breakdown using Scrum principles.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">SDLC</span>
+                            <span class="tech-tag">UML</span>
+                            <span class="tech-tag">Scrum</span>
+                            <span class="tech-tag">Documentation</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder">
+                            <i class="fa-solid fa-map"></i>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Geospatial Claim Visualization Tool</h3>
+                        <p>Independently designed and implemented a Java-based mapping system to visualize and track 800+ real-time region claims. Integrated Discord bot (JDA) used by 50+ users for on-demand map images and automated alerts. Implemented automated diffing of region data to detect changes.</p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">JDA</span>
+                            <span class="tech-tag">JSON</span>
+                            <span class="tech-tag">Discord Bot</span>
+                        </div>
+                    </div>
+                </article>
             </div>
         </section>
 
@@ -73,78 +253,158 @@
         <section id="skills" class="skills-section">
             <h2>Skills</h2>
             <div class="text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus ullam quam rem beatae tempore, blanditiis cumque nisi optio vero voluptatem iusto consectetur, quas soluta ipsa, tenetur molestias. Ab, itaque ipsa.
+                <p>I specialize in object-oriented programming and software engineering, with strong foundations in Java and C#. My experience spans from system design and architecture to full SDLC documentation, collaborative problem-solving, and building modular software systems.</p>
             </div>
-            <div class="cells">
-                <div class="cell">
-                    <img src="images/html-logo.webp" alt="HTML Logo">
-                    <span>HTML</span>
+            
+            <div class="skills-categories">
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fa-solid fa-code"></i>
+                        Programming Languages
+                    </h3>
+                    <div class="cells">
+                        <div class="cell">
+                            <i class="fab fa-java"></i>
+                            <span>Java</span>
+                        </div>
+                        <div class="cell">
+                            <i class="fa-solid fa-hashtag"></i>
+                            <span>C#</span>
+                        </div>
+                        <div class="cell">
+                            <i class="fa-solid fa-code"></i>
+                            <span>C++</span>
+                        </div>
+                        <div class="cell">
+                            <i class="fab fa-js-square"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="cell">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML/CSS</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="cell">
-                    <img src="images/css-logo.webp" alt="CSS Logo">
-                    <span>CSS</span>
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fa-solid fa-tools"></i>
+                        Tools & Platforms
+                    </h3>
+                    <div class="cells">
+                        <div class="cell">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                        </div>
+                        <div class="cell">
+                            <i class="fa-solid fa-terminal"></i>
+                            <span>Linux</span>
+                        </div>
+                        <div class="cell">
+                            <i class="fa-solid fa-code"></i>
+                            <span>VSCode</span>
+                        </div>
+                        <div class="cell">
+                            <i class="fa-solid fa-cube"></i>
+                            <span>Maven</span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="cell">
-                    <img src="images/javascript-logo.webp" alt="Javascript Logo">
-                    <span>Javascript</span>
-                </div>
-
-                <div class="cell">
-                    <img src="images/node-logo.webp" alt="Node Logo">
-                    <span>Node.js</span>
-                </div>
-
-                <div class="cell">
-                    <img src="images/react-logo.webp" alt="React Logo">
-                    <span>React.js</span>
-                </div>
-            </div>
-
-
-        </section>
-
-        <!-- Testimony -->
-        <section id="testimony" class="testimony-section">
-            <h2>Testimony</h2>
-
-            <div class="group">
-                <div class="person-details">
-                    <img src="images/testimony-headshot.webp" alt="gordan ranmsay">
-                    <p>Gordan Ramsay</p>
-                    <p>Professional Chef and Food Critic</p>
-                </div>
-                <div class="text">
-                    "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tenetur quia laudantium placeat voluptates adipisci, accusantium sed ab dicta incidunt asperiores commodi! Velit quidem iusto amet alias sint. Fugiat suscipit commodi pariatur dicta ab quaerat fuga, quia ad sed consectetur. Accusamus, aliquid libero natus adipisci incidunt tempora aperiam modi earum delectus?"
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fa-solid fa-cogs"></i>
+                        Libraries & Methodologies
+                    </h3>
+                    <div class="cells">
+                        <div class="cell">
+                            <i class="fa-solid fa-robot"></i>
+                            <span>JDA</span>
+                        </div>
+                        <div class="cell">
+                            <i class="fa-solid fa-spider"></i>
+                            <span>Jsoup</span>
+                        </div>
+                        <div class="cell">
+                            <i class="fa-solid fa-users"></i>
+                            <span>Agile</span>
+                        </div>
+                        <div class="cell">
+                            <i class="fa-solid fa-tasks"></i>
+                            <span>Scrum</span>
+                        </div>
+                        <div class="cell">
+                            <i class="fa-solid fa-sitemap"></i>
+                            <span>UML</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Contact -->
         <section id="contact" class="contact-section">
-            <h2>Contact</h2>
+            <h2>Get In Touch</h2>
             <div class="group">
                 <div class="text">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit rerum neque possimus corrupti facere quas tenetur dicta? Ullam nemo sed reiciendis doloremque commodi provident officiis eum eius corrupti corporis impedit nulla hic iste aut laborum distinctio dolorum quas veritatis, error dolor cum iure recusandae. Deleniti id iste velit animi eaque!
+                    <h3>Let's work together!</h3>
+                    <p>I'm always interested in new opportunities and exciting projects. Whether you have a question about my work, want to collaborate on something amazing, or just want to say hello, I'd love to hear from you!</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <p>contact.lucashill@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Flint, Michigan</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fa-solid fa-clock"></i>
+                            <div>
+                                <h4>Availability</h4>
+                                <p>Open to new opportunities</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <form>
-                    <label for="name">Name</label>
-                    <input type="text" id="name">
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name *</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
 
-                    <label for="email">Email</label>
-                    <input type="text" id="email">
+                    <div class="form-group">
+                        <label for="email">Email *</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
 
-                    <label for="message">Message</label>
-                    <textarea id="message" cols="30" rows="10"></textarea>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject">
+                    </div>
 
-                    <button type="submit">Send Message</button>
+                    <div class="form-group">
+                        <label for="message">Message *</label>
+                        <textarea id="message" name="message" cols="30" rows="8" required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <i class="fa-solid fa-paper-plane"></i>
+                        <span>Send Message</span>
+                    </button>
                 </form>
             </div>
-    
         </section>
 
     </main>
+<script src="main.js" defer></script>
 </body>
 </html>
