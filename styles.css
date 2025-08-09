@@ -94,25 +94,25 @@ a:hover {
 }
 
 /* Navigation */
-nav {
-    position: sticky;
-    top: 10px;
-    z-index: 1000;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 30px;
-    max-width: 90%;
-    margin: 0 auto 50px;
-    height: 60px;
-    background: var(--glass-bg);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    border: 1px solid var(--glass-border);
-    border-radius: 16px;
-    box-shadow: var(--glass-shadow);
-    transition: all 0.3s ease;
-}
+ nav {
+     position: sticky;
+     top: 10px;
+     z-index: 1000;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0 30px;
+     max-width: 95%;
+     margin: 0 auto 50px;
+     height: 60px;
+     background: var(--glass-bg);
+     backdrop-filter: blur(20px);
+     -webkit-backdrop-filter: blur(20px);
+     border: 1px solid var(--glass-border);
+     border-radius: 16px;
+     box-shadow: var(--glass-shadow);
+     transition: all 0.3s ease;
+ }
 
 header {
     display: contents;
@@ -958,6 +958,10 @@ nav .right a:last-child span, nav .right a:last-child i {
 
 .email-cta i {
     font-size: 18px;
+    color: #000000;
+}
+
+.email-cta span {
     color: #000000;
 }
 
