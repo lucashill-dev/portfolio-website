@@ -67,15 +67,16 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Body */
+/* Body - Enhanced for cross-platform consistency */
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     background-color: var(--background-color);
     max-width: 805px;
     margin: 0 auto;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
     transform: translateZ(0);
     background: linear-gradient(135deg, var(--background-color) 0%, var(--background-secondary) 50%, var(--background-tertiary) 100%);
     min-height: 100vh;
@@ -210,17 +211,18 @@ nav .right a:last-child span, nav .right a:last-child i {
     box-shadow: 0 8px 25px rgba(255, 203, 5, 0.4);
 }
 
-/* Hero Section */
+/* Hero Section - Resolution-aware sizing */
 .hero-section {
     position: relative;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 50px 40px;
-    gap: 40px;
+    padding: clamp(30px, 5vw, 60px) clamp(20px, 4vw, 50px);
+    gap: clamp(20px, 4vw, 40px);
     margin: 0 15px 120px 15px;
-    min-height: 70vh;
+    min-height: clamp(450px, 70vh, 700px);
+    height: auto;
     background: var(--gradient-primary);
     border-radius: 20px;
     border: 1px solid var(--glass-border);
@@ -334,18 +336,20 @@ nav .right a:last-child span, nav .right a:last-child i {
     50% { transform: translateY(-20px) rotate(180deg); }
 }
 
-/* Hero Title */
+/* Hero Title - Responsive font sizing to prevent wrapping */
 .hero-title {
     display: flex;
     align-items: center;
-    gap: 15px;
-    font-size: 48px;
+    gap: clamp(10px, 2vw, 15px);
+    font-size: clamp(32px, 4vw, 48px);
     font-weight: 700;
     margin-bottom: 24px;
     background: var(--gradient-maize);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    flex-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .greeting {
@@ -358,10 +362,11 @@ nav .right a:last-child span, nav .right a:last-child i {
 .wave {
     animation: wave 2s ease-in-out infinite;
     display: inline-block;
-    font-size: 48px;
+    font-size: clamp(32px, 4vw, 48px);
     line-height: 1;
     -webkit-text-fill-color: initial;
     color: var(--maize-primary);
+    flex-shrink: 0;
 }
 
 @keyframes wave {
@@ -1230,11 +1235,37 @@ input:focus, textarea:focus {
     }
 }
 
+/* DPI-aware media queries for high resolution displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .hero-title {
+        font-size: clamp(30px, 3.8vw, 44px);
+    }
+    
+    .hero-section {
+        min-height: clamp(420px, 65vh, 650px);
+    }
+}
+
+/* Large screens - prevent excessive sizing */
+@media (min-width: 1920px) {
+    .hero-section {
+        min-height: clamp(500px, 60vh, 650px);
+        max-width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .hero-title {
+        font-size: clamp(40px, 3vw, 48px);
+    }
+}
+
 @media (max-width: 480px) {
     .hero-title {
-        font-size: 36px;
+        font-size: clamp(28px, 6vw, 36px);
         flex-direction: column;
         gap: 10px;
+        white-space: normal;
     }
     
     .cta-button {
