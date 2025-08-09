@@ -7,7 +7,7 @@
     <meta name="keywords" content="Lucas Hill, Software Engineer, Web Developer, UM-Flint, Computer Science">
     <meta name="author" content="Lucas Hill">
     
-    <!-- Open Graph / Facebook -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://lucashill.dev/">
     <meta property="og:title" content="Lucas Hill - Portfolio">
@@ -32,15 +32,13 @@
     <title>Lucas Hill - Portfolio</title>
 </head>
 <body>
-    <!-- Progress Indicator -->
     <div class="progress-indicator" id="progress-indicator"></div>
     
-    <!-- Back to Top Button -->
     <button class="back-to-top" id="back-to-top" aria-label="Back to top">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
-    <!-- Header / NAVBAR -->
+    <!-- Header -->
     <header>
         <nav>
             <div class="left">
@@ -67,9 +65,7 @@
     </header>
 
     <main>
-        <!-- Hero -->
         <section class="hero-section">
-            <!-- Animated Background -->
             <div class="hero-background">
                 <div class="floating-shapes">
                     <div class="shape shape-1"></div>
@@ -117,7 +113,6 @@
             </div>
         </section>
 
-        <!-- Experience -->
         <section id="experience" class="experience-section">
             <div class="experience-tabs" role="tablist" aria-label="Experience tabs">
                 <button id="tab-education" class="tab-button active" role="tab" aria-selected="true" aria-controls="education-timeline" data-tab="education">
@@ -131,7 +126,6 @@
             </div>
             
             <div class="experience-content">
-                <!-- Education Timeline -->
                 <div class="timeline active" id="education-timeline" role="tabpanel" aria-labelledby="tab-education" tabindex="0">
                     <div class="timeline-item">
                         <div class="timeline-marker">
@@ -179,7 +173,6 @@
                     </div>
                 </div>
 
-                <!-- Work Timeline -->
                 <div class="timeline" id="work-timeline" role="tabpanel" aria-labelledby="tab-work" tabindex="0" hidden>
                     <div class="timeline-item">
                         <div class="timeline-marker">
@@ -207,7 +200,6 @@
             </div>
         </section>
 
-        <!-- Projects -->
         <section id="projects" class="projects-section">
             <h2>Featured Projects</h2>
             <div class="projects-grid">
@@ -249,7 +241,6 @@
             </div>
         </section>
 
-        <!-- Skills -->
         <section id="skills" class="skills-section">
             <h2>Skills</h2>
             <div class="text">
@@ -342,65 +333,32 @@
             </div>
         </section>
 
-        <!-- Contact -->
         <section id="contact" class="contact-section">
             <h2>Get In Touch</h2>
-            <div class="group">
-                <div class="text">
+            <div class="contact-content">
+                <div class="contact-text">
                     <h3>Let's work together!</h3>
                     <p>I'm always interested in new opportunities and exciting projects. Whether you have a question about my work, want to collaborate on something amazing, or just want to say hello, I'd love to hear from you!</p>
+                </div>
+                
+                <div class="contact-actions">
+                    <a href="mailto:contact.lucashill@gmail.com" class="email-cta">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>contact.lucashill@gmail.com</span>
+                    </a>
+                    <p class="contact-note">Click to send me an email directly</p>
                     
-                    <div class="contact-info">
-                        <div class="contact-item">
-                            <i class="fa-solid fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>contact.lucashill@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
+                    <div class="contact-info-grid">
+                        <div class="contact-info-item">
                             <i class="fa-solid fa-location-dot"></i>
-                            <div>
-                                <h4>Location</h4>
-                                <p>Flint, Michigan</p>
-                            </div>
+                            <span>Flint, Michigan</span>
                         </div>
-                        <div class="contact-item">
+                        <div class="contact-info-item">
                             <i class="fa-solid fa-clock"></i>
-                            <div>
-                                <h4>Availability</h4>
-                                <p>Open to new opportunities</p>
-                            </div>
+                            <span>Open to new opportunities</span>
                         </div>
                     </div>
                 </div>
-
-                <form class="contact-form" id="contact-form">
-                    <div class="form-group">
-                        <label for="name">Name *</label>
-                        <input type="text" id="name" name="name" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-
-                    <div class="form-group">
-                        <label for="subject">Subject</label>
-                        <input type="text" id="subject" name="subject">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" cols="30" rows="8" required></textarea>
-                    </div>
-
-                    <button type="submit" class="submit-btn">
-                        <i class="fa-solid fa-paper-plane"></i>
-                        <span>Send Message</span>
-                    </button>
-                </form>
             </div>
         </section>
 

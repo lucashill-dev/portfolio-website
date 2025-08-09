@@ -1,10 +1,7 @@
-// Enhanced Portfolio JavaScript
 document.addEventListener('DOMContentLoaded', function() {
-    // Progress Indicator
     const progressIndicator = document.getElementById('progress-indicator');
     const backToTop = document.getElementById('back-to-top');
 
-    // Update progress indicator on scroll
     window.addEventListener('scroll', function() {
         const scrollTop = window.pageYOffset;
         const docHeight = document.body.offsetHeight - window.innerHeight;
@@ -14,7 +11,6 @@ document.addEventListener('DOMContentLoaded', function() {
             progressIndicator.style.width = scrollPercent + '%';
         }
 
-        // Show/hide back to top button
         if (backToTop) {
             if (scrollTop > 300) {
                 backToTop.classList.add('visible');
@@ -24,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    // Back to top functionality
     if (backToTop) {
         backToTop.addEventListener('click', function() {
             window.scrollTo({
@@ -34,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Experience section tab functionality
+    // Experience tabs
     const tabButtons = document.querySelectorAll('.tab-button[role="tab"]');
     const timelines = document.querySelectorAll('.timeline[role="tabpanel"]');
 
@@ -42,7 +37,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const targetTimeline = document.getElementById(targetId + '-timeline');
         const targetButton = document.querySelector(`[data-tab="${targetId}"]`);
 
-        // Update buttons ARIA state
         tabButtons.forEach(btn => {
             const isActive = btn === targetButton;
             btn.classList.toggle('active', isActive);
@@ -50,13 +44,11 @@ document.addEventListener('DOMContentLoaded', function() {
             btn.setAttribute('tabindex', isActive ? '0' : '-1');
         });
 
-        // Toggle panels
         timelines.forEach(panel => {
             const isTarget = panel === targetTimeline;
             panel.classList.toggle('active', isTarget);
             if (isTarget) {
                 panel.hidden = false;
-                // Trigger reflow for transition
                 panel.offsetHeight;
             } else {
                 panel.hidden = true;
@@ -64,18 +56,15 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Initialize to currently marked active or default to education
     const activeOnLoad = document.querySelector('.timeline.active')?.id?.replace('-timeline', '') || 'education';
     setActiveTab(activeOnLoad);
 
-    // Wire up events
     tabButtons.forEach(button => {
         button.addEventListener('click', function() {
             const targetId = this.getAttribute('data-tab');
             setActiveTab(targetId);
         });
 
-        // Keyboard support: Left/Right arrows to switch tabs
         button.addEventListener('keydown', function(e) {
             if (e.key !== 'ArrowLeft' && e.key !== 'ArrowRight') return;
             e.preventDefault();
@@ -88,7 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Smooth scrolling for navigation links
+    // Smooth scrolling
     const navLinks = document.querySelectorAll('a[href^="#"]');
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -101,7 +90,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Enhanced scroll animations
+    // Scroll animations
     const observerOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
@@ -119,50 +108,9 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(section);
     });
 
-    // Contact form handling
-    const contactForm = document.getElementById('contact-form');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const subject = formData.get('subject');
-            const message = formData.get('message');
 
-            // Basic validation
-            if (!name || !email || !message) {
-                alert('Please fill in all required fields.');
-                return;
-            }
 
-            // Email validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                alert('Please enter a valid email address.');
-                return;
-            }
-
-            // Simulate form submission (replace with actual form handling)
-            const submitBtn = this.querySelector('.submit-btn');
-            const originalText = submitBtn.innerHTML;
-            
-            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i><span>Sending...</span>';
-            submitBtn.disabled = true;
-
-            // Simulate API call
-            setTimeout(() => {
-                alert('Thank you for your message! I\'ll get back to you soon.');
-                this.reset();
-                submitBtn.innerHTML = originalText;
-                submitBtn.disabled = false;
-            }, 2000);
-        });
-    }
-
-    // Enhanced hover effects for project cards
+    // Project cards hover
     const projectCards = document.querySelectorAll('.project-card');
     projectCards.forEach(card => {
         card.addEventListener('mouseenter', function() {
@@ -174,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Parallax effect for floating shapes
+    // Floating shapes parallax
     window.addEventListener('scroll', function() {
         const scrolled = window.pageYOffset;
         const shapes = document.querySelectorAll('.shape');
@@ -186,14 +134,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Ensure Experience is visible on load
     const experienceSection = document.getElementById('experience');
     if (experienceSection) {
         experienceSection.classList.add('animate-in');
         experienceSection.classList.remove('animate-out');
     }
 
-    // Add loading animation for images
+    // Image loading
     const images = document.querySelectorAll('img');
     images.forEach(img => {
         img.addEventListener('load', function() {
