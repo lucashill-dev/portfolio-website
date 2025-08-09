@@ -10,25 +10,19 @@
     --border-color-hover: rgba(255, 255, 255, 0.2);
     
     /* U of M Colors */
-    --maize-primary: #ffcb05;
-    --maize-secondary: #ffd700;
-    --blue-primary: #00274c;
-    --blue-secondary: #003d7a;
-    --blue-accent: #004d99;
-    
-    /* Accent Colors */
-    --purple-accent: #8b5cf6;
-    --green-accent: #10b981;
-    --orange-accent: #f59e0b;
-    --red-accent: #ef4444;
-    
-    /* Gradients */
-    --gradient-primary: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-    --gradient-secondary: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
-    --gradient-maize: linear-gradient(135deg, var(--maize-primary) 0%, var(--maize-secondary) 100%);
-    --gradient-blue: linear-gradient(135deg, var(--blue-primary) 0%, var(--blue-secondary) 100%);
-    --gradient-purple: linear-gradient(135deg, var(--purple-accent) 0%, #a855f7 100%);
-    --gradient-green: linear-gradient(135deg, var(--green-accent) 0%, #34d399 100%);
+     --maize-primary: #ffcb05;
+     --maize-secondary: #ffd700;
+     --blue-primary: #00274c;
+     
+     /* Accent Colors */
+     --green-accent: #10b981;
+     --orange-accent: #f59e0b;
+     --red-accent: #ef4444;
+     
+     /* Gradients */
+     --gradient-primary: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+     --gradient-secondary: linear-gradient(135deg, #111111 0%, #1a1a1a 100%);
+     --gradient-maize: linear-gradient(135deg, var(--maize-primary) 0%, var(--maize-secondary) 100%);
     
     /* Glass Effects */
     --glass-bg: rgba(255, 255, 255, 0.05);
@@ -150,22 +144,11 @@ nav .right a:hover {
     transform: translateY(-1px);
 }
 
-nav .right a:last-child {
-    color: #000000;
-    background: var(--gradient-maize);
-    padding: 8px 15px;
-    border-radius: 8px;
-    border: 1px solid var(--maize-primary);
-}
-
 nav .right a span {
     margin-left: 5px;
 }
 
-nav .right a:last-child span, nav .right a:last-child i {
-    color: #000000;
-    margin-left: 5px;
-}
+
 
 /* Progress Bar */
 .progress-indicator {
@@ -397,12 +380,6 @@ nav .right a:last-child span, nav .right a:last-child i {
     position: relative;
     overflow: hidden;
     margin: 0 8px 8px 0;
-}
-
-.cta-button.primary {
-    background: var(--gradient-maize);
-    color: #000000;
-    border-color: var(--maize-primary);
 }
 
 .cta-button.secondary {
@@ -1121,11 +1098,7 @@ nav .right a:last-child span, nav .right a:last-child i {
         font-size: 22px;
     }
 
-    nav .right a:last-child, nav .right a:last-child i  {
-        color: var(--text-color);
-        background: transparent;
-        padding: 0px;
-    }
+
 
     nav .right a span {
         display: none;
@@ -1264,28 +1237,14 @@ nav .right a:last-child span, nav .right a:last-child i {
     }
 }
 
-/* Animations */
-section {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-    scroll-margin-top: 90px;
-}
+
 
 @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     *, *::before, *::after { transition: none !important; animation: none !important; }
 }
 
-section.animate-in {
-    opacity: 1;
-    transform: translate3d(0, 0, 0);
-}
 
-section.animate-out {
-    opacity: 0;
-    transform: translate3d(0, 15px, 0);
-}
 
 /* Text Color Fixes */
 .timeline-role {
@@ -1317,23 +1276,17 @@ section.animate-out {
     opacity: 0.8;
 }
 
-/* Yellow Background Text */
-.tab-button.active,
-.tab-button.active i,
-.tab-button.active span,
-.timeline-logo i,
-.tech-tag,
-.submit-btn,
-.submit-btn i,
-.submit-btn span,
-nav .right a:last-child,
-nav .right a:last-child i,
-nav .right a:last-child span,
-.hero-section .text .links a:hover,
-.hero-section .text .links a:hover i,
-.hero-section .text .links a:hover span {
-    color: #000000 !important;
-}
+ /* Yellow Background Text */
+ .tab-button.active,
+ .tab-button.active i,
+ .tab-button.active span,
+ .timeline-logo i,
+ .tech-tag,
+ .hero-section .text .links a:hover,
+ .hero-section .text .links a:hover i,
+ .hero-section .text .links a:hover span {
+     color: #000000 !important;
+ }
 
 .timeline.active .timeline-item {
     opacity: 1;
