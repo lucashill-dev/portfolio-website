@@ -55,6 +55,34 @@
     z-index: 2;
 }
 
+.hero-section .headshot img.shake {
+    animation: headshot-shake 0.4s ease;
+}
+
+@keyframes headshot-shake {
+    0%, 100% { transform: rotate(0deg); }
+    20% { transform: rotate(-6deg); }
+    40% { transform: rotate(5deg); }
+    60% { transform: rotate(-3deg); }
+    80% { transform: rotate(2deg); }
+}
+
+.sparkle {
+    position: absolute;
+    color: var(--accent);
+    font-size: 14px;
+    pointer-events: none;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    animation: sparkle-rise 0.8s ease-out forwards;
+}
+
+@keyframes sparkle-rise {
+    0% { opacity: 1; transform: translate(-50%, -50%) scale(0.6); }
+    40% { opacity: 1; }
+    100% { opacity: 0; transform: translate(calc(-50% + var(--dx)), calc(-50% + var(--dy))) scale(1); }
+}
+
 .headshot-glow {
     position: absolute;
     inset: -10px;
