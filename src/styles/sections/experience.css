@@ -1,0 +1,229 @@
+.experience-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    margin-bottom: 56px;
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: 16px;
+    padding: 8px;
+    backdrop-filter: blur(10px);
+    max-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tab-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px 28px;
+    background: transparent;
+    border: none;
+    border-radius: 12px;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: background 0.25s ease, color 0.25s ease, transform 0.25s ease;
+    font-family: var(--font-primary);
+    font-size: 15px;
+    font-weight: 500;
+    flex: 1;
+}
+
+.tab-button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+}
+
+.tab-button.active {
+    background: var(--accent-gradient);
+    color: #15110a;
+    box-shadow: var(--shadow-sm);
+}
+
+.tab-button.active i,
+.tab-button.active span {
+    color: #15110a;
+}
+
+/* Timeline */
+.timeline {
+    display: block;
+    max-width: 680px;
+    margin: 0 auto;
+    position: relative;
+    opacity: 0;
+    transform: translateY(6px);
+    transition: opacity 180ms ease, transform 180ms ease;
+}
+
+.timeline[hidden] {
+    display: none !important;
+}
+
+.timeline.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: var(--accent-gradient);
+    opacity: 0.35;
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 76px;
+    margin-bottom: 52px;
+}
+
+.timeline-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-marker {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline-logo {
+    width: 46px;
+    height: 46px;
+    background: var(--accent-gradient);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid var(--bg);
+    box-shadow: var(--shadow-sm);
+}
+
+.timeline-logo i {
+    font-size: 18px;
+    color: #15110a;
+}
+
+.timeline-content {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    padding: 28px;
+    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    backdrop-filter: blur(10px);
+}
+
+.timeline-content:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent);
+}
+
+.timeline-header {
+    margin-bottom: 20px;
+}
+
+.timeline-date {
+    display: block;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+    font-weight: 500;
+}
+
+.timeline-content h3 {
+    font-size: 22px;
+    margin-bottom: 6px;
+    font-weight: 600;
+}
+
+.timeline-role {
+    font-size: 15px;
+    color: var(--accent);
+    font-weight: 500;
+}
+
+.timeline-description {
+    margin-top: 18px;
+}
+
+.timeline-description ul {
+    list-style: none;
+}
+
+.timeline-description li {
+    position: relative;
+    padding-left: 22px;
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+.timeline-description li:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-description li::before {
+    content: '•';
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+    font-weight: bold;
+}
+
+@media (max-width: 650px) {
+    .experience-tabs {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+        max-width: 280px;
+        padding: 12px;
+    }
+
+    .tab-button {
+        width: 100%;
+        padding: 13px 24px;
+    }
+
+    .timeline {
+        max-width: 100%;
+    }
+
+    .timeline::before {
+        left: 24px;
+    }
+
+    .timeline-item {
+        padding-left: 66px;
+    }
+
+    .timeline-marker {
+        width: 48px;
+        height: 48px;
+    }
+
+    .timeline-logo {
+        width: 38px;
+        height: 38px;
+    }
+
+    .timeline-logo i {
+        font-size: 15px;
+    }
+
+    .timeline-content {
+        padding: 22px;
+    }
+}
