@@ -1,6 +1,5 @@
 import './style.css';
 import { renderNav } from './components/nav';
-import { renderProgressBar, initProgressBar } from './components/progressBar';
 import { renderBackToTop, initBackToTop } from './components/backToTop';
 import { initImageFadeIn } from './components/scrollAnimations';
 
@@ -8,7 +7,6 @@ const app = document.getElementById('app');
 if (!app) throw new Error('#app mount point not found');
 
 app.innerHTML = `
-  ${renderProgressBar()}
   ${renderBackToTop()}
   ${renderNav()}
   <main>
@@ -37,6 +35,5 @@ app.innerHTML = `
     </section>
   </main>`;
 
-initProgressBar();
 initBackToTop();
 initImageFadeIn();
