@@ -6,9 +6,19 @@ My personal portfolio website showcasing my experience as a Software Engineering
 
 ## Tech Stack
 
-- HTML5, CSS3, JavaScript
+- TypeScript, HTML5, CSS3
+- Vite (build tooling)
 - Font Awesome icons
 - Hosted on Vercel
+
+## Development
+
+```
+npm install
+npm run dev      # local dev server
+npm run build    # production build to dist/
+npm run preview  # preview the production build
+```
 
 ## Features
 
