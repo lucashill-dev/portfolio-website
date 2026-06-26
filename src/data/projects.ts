@@ -24,7 +24,7 @@ export const projects: Project[] = [
     tech: ['Java', 'Maven', 'JUnit', 'Operating Systems'],
     icon: 'fa-solid fa-terminal',
     link: 'https://github.com/aharalam/csc377-semester-project',
-    report: 'https://docs.google.com/document/d/1ksikfWp_83qLPLbha2Mag0HHgZM20e4Je_W_9pZBB2k/edit?tab=t.0',
+    report: 'https://drive.google.com/file/d/1qYBaMzfFERVilP9U0zHu3r6XS1s6o72Q/view?usp=sharing',
   },
   {
     title: 'Geospatial Claim Visualization Tool',
