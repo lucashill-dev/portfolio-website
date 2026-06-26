@@ -12,7 +12,7 @@ export function renderSkills(): string {
         ${skillCategories
           .map(
             (category) => `
-          <div class="skill-category">
+          <div class="skill-category glow-card">
             <h3 class="category-title">
               <i class="${category.icon}"></i>
               ${category.title}
