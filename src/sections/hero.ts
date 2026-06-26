@@ -10,7 +10,6 @@ const heroLinks: HeroLink[] = [
   { href: '#experience', icon: 'fa-solid fa-briefcase', label: 'Experience' },
   { href: '#skills', icon: 'fa-solid fa-code', label: 'Skills' },
   { href: '#contact', icon: 'fa-solid fa-envelope', label: 'Contact' },
-  { href: '/resume', icon: 'fa-solid fa-file-lines', label: 'Resume' },
 ];
 
 function renderHeroLink(link: HeroLink): string {
@@ -30,6 +29,7 @@ export function renderHero(): string {
           <div class="shape shape-1"></div>
           <div class="shape shape-2"></div>
           <div class="shape shape-3"></div>
+          <div class="shape shape-4"></div>
         </div>
       </div>
 

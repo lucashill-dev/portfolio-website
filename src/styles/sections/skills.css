@@ -73,7 +73,7 @@ main section.animate-in .skill-category {
 .cell:hover {
     border-color: var(--accent);
     transform: translateY(-3px);
-    box-shadow: 0 10px 24px rgba(245, 158, 11, 0.15);
+    box-shadow: 0 10px 24px rgba(166, 184, 218, 0.15);
 }
 
 .cell span {

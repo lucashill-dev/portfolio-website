@@ -15,16 +15,16 @@
 }
 
 .cta-button:hover {
-    background: var(--accent-gradient);
-    color: #15110a;
+    background: var(--accent);
+    color: var(--on-accent);
     border-color: var(--accent);
     transform: translateY(-2px);
-    box-shadow: 0 10px 24px rgba(245, 158, 11, 0.25);
+    box-shadow: 0 10px 24px rgba(166, 184, 218, 0.25);
 }
 
 .cta-button:hover i,
 .cta-button:hover span {
-    color: #15110a;
+    color: var(--on-accent);
 }
 
 .back-link {

@@ -37,14 +37,14 @@
 }
 
 .tab-button.active {
-    background: var(--accent-gradient);
-    color: #15110a;
+    background: var(--accent);
+    color: var(--on-accent);
     box-shadow: var(--shadow-sm);
 }
 
 .tab-button.active i,
 .tab-button.active span {
-    color: #15110a;
+    color: var(--on-accent);
 }
 
 /* Timeline */
@@ -74,7 +74,7 @@
     top: 0;
     bottom: 0;
     width: 2px;
-    background: var(--accent-gradient);
+    background: var(--accent);
     opacity: 0.35;
 }
 
@@ -102,7 +102,7 @@
 .timeline-logo {
     width: 46px;
     height: 46px;
-    background: var(--accent-gradient);
+    background: var(--accent);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -113,7 +113,7 @@
 
 .timeline-logo i {
     font-size: 18px;
-    color: #15110a;
+    color: var(--on-accent);
 }
 
 .timeline-content {

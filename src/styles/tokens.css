@@ -1,24 +1,25 @@
 :root {
-    --bg: #0a0908;
-    --bg-secondary: #121110;
-    --bg-tertiary: #1a1816;
+    --bg: #11141c;
+    --bg-secondary: #171b26;
+    --bg-tertiary: #1d2230;
 
-    --text: #f5f1ec;
-    --text-secondary: rgba(245, 241, 236, 0.75);
-    --text-muted: rgba(245, 241, 236, 0.55);
+    --text: #f1f3f8;
+    --text-secondary: rgba(241, 243, 248, 0.75);
+    --text-muted: rgba(241, 243, 248, 0.55);
 
-    --accent: #f59e0b;
-    --accent-2: #fb6f4d;
-    --accent-gradient: linear-gradient(135deg, var(--accent) 0%, var(--accent-2) 100%);
+    /* Dusty lavender-blue: single accent — headings, links, buttons, badges, interactive states */
+    --accent: #a6b8da;
+    --accent-strong: #8a9bd6;
+    --on-accent: #0d1018;
 
-    --border-color: rgba(245, 241, 236, 0.08);
-    --border-color-hover: rgba(245, 241, 236, 0.16);
+    --border-color: rgba(241, 243, 248, 0.08);
+    --border-color-hover: rgba(241, 243, 248, 0.16);
 
     --gradient-primary: linear-gradient(135deg, var(--bg) 0%, var(--bg-tertiary) 100%);
     --gradient-secondary: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
 
-    --glass-bg: rgba(245, 241, 236, 0.04);
-    --glass-border: rgba(245, 241, 236, 0.08);
+    --glass-bg: rgba(241, 243, 248, 0.04);
+    --glass-border: rgba(241, 243, 248, 0.08);
     --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.25);
     --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.3);
 

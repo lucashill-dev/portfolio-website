@@ -72,8 +72,8 @@ main section.animate-in .project-card {
 }
 
 .tech-tag {
-    background: var(--accent-gradient);
-    color: #15110a;
+    background: var(--accent);
+    color: var(--on-accent);
     padding: 5px 12px;
     border-radius: 20px;
     font-size: 12px;
@@ -91,7 +91,7 @@ main section.animate-in .project-card {
 }
 
 .project-link:hover {
-    color: var(--accent-2);
+    color: var(--accent-strong);
 }
 
 .project-link--private {
