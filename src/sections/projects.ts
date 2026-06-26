@@ -1,4 +1,22 @@
-import { projects } from '../data/projects';
+import { projects, type Project } from '../data/projects';
+
+function renderProjectLink(project: Project): string {
+  if (project.link) {
+    return `
+      <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="project-link">
+        <i class="fa-brands fa-github" aria-hidden="true"></i>
+        <span>View Code</span>
+      </a>`;
+  }
+  if (project.private) {
+    return `
+      <span class="project-link project-link--private">
+        <i class="fa-solid fa-lock" aria-hidden="true"></i>
+        <span>Private (NDA)</span>
+      </span>`;
+  }
+  return '';
+}
 
 export function renderProjects(): string {
   return `
@@ -20,6 +38,7 @@ export function renderProjects(): string {
               <div class="project-tech">
                 ${project.tech.map((tag) => `<span class="tech-tag">${tag}</span>`).join('')}
               </div>
+              ${renderProjectLink(project)}
             </div>
           </article>`
           )

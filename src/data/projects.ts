@@ -3,6 +3,8 @@ export interface Project {
   description: string;
   tech: string[];
   icon: string;
+  link?: string;
+  private?: boolean;
 }
 
 export const projects: Project[] = [
@@ -12,6 +14,7 @@ export const projects: Project[] = [
       'Collaborated in a 4-person team to produce 150+ pages of full SDLC documentation for a proposed client-facing application. Completed SRS, PMP, architectural design, and test plan documentation. Led estimation and task breakdown using Scrum principles.',
     tech: ['SDLC', 'UML', 'Scrum', 'Documentation'],
     icon: 'fa-solid fa-file-alt',
+    private: true,
   },
   {
     title: 'Geospatial Claim Visualization Tool',
@@ -19,5 +22,6 @@ export const projects: Project[] = [
       'Independently designed and implemented a Java-based mapping system to visualize and track 800+ real-time region claims. Integrated Discord bot (JDA) used by 50+ users for on-demand map images and automated alerts. Implemented automated diffing of region data to detect changes.',
     tech: ['Java', 'JDA', 'JSON', 'Discord Bot'],
     icon: 'fa-solid fa-map',
+    link: 'https://github.com/Capnaa/StoneworksMap/tree/v2',
   },
 ];
