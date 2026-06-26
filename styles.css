@@ -1030,8 +1030,7 @@ nav .right a span {
 .resume-viewer {
     max-width: 850px;
     margin: 0 auto;
-    height: 80vh;
-    min-height: 500px;
+    aspect-ratio: 8.5 / 11;
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-lg);
     overflow: hidden;
@@ -1049,10 +1048,6 @@ nav .right a span {
 @media (max-width: 650px) {
     .resume-section {
         padding: 0 30px;
-    }
-
-    .resume-viewer {
-        height: 70vh;
     }
 }
 
