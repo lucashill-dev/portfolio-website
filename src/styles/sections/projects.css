@@ -110,6 +110,9 @@ main section.animate-in .project-card {
 
 .project-link:hover {
     color: var(--accent-strong);
+}
+
+.project-link:hover span {
     text-decoration: underline;
 }
 
