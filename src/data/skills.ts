@@ -12,8 +12,7 @@ export const skillCategories: SkillCategory[] = [
       { icon: 'fab fa-java', name: 'Java' },
       { icon: 'fa-solid fa-hashtag', name: 'C#' },
       { icon: 'fa-solid fa-code', name: 'C++' },
-      { icon: 'fab fa-js-square', name: 'JavaScript' },
-      { icon: 'fab fa-html5', name: 'HTML/CSS' },
+      { icon: 'fab fa-python', name: 'Python' },
     ],
   },
   {
@@ -21,20 +20,27 @@ export const skillCategories: SkillCategory[] = [
     title: 'Tools & Platforms',
     skills: [
       { icon: 'fab fa-git-alt', name: 'Git' },
+      { icon: 'fa-solid fa-cube', name: 'Maven' },
       { icon: 'fa-solid fa-terminal', name: 'Linux' },
       { icon: 'fa-solid fa-code', name: 'VSCode' },
-      { icon: 'fa-solid fa-cube', name: 'Maven' },
       { icon: 'fa-solid fa-cube', name: 'JetBrains IDEs' },
     ],
   },
   {
-    icon: 'fa-solid fa-cogs',
-    title: 'Libraries & Methodologies',
+    icon: 'fa-solid fa-puzzle-piece',
+    title: 'Libraries & APIs',
     skills: [
-      { icon: 'fa-solid fa-robot', name: 'JDA' },
+      { icon: 'fa-solid fa-robot', name: 'JDA (Discord API)' },
       { icon: 'fa-solid fa-spider', name: 'Jsoup' },
+    ],
+  },
+  {
+    icon: 'fa-solid fa-diagram-project',
+    title: 'Methodologies',
+    skills: [
       { icon: 'fa-solid fa-users', name: 'Agile' },
       { icon: 'fa-solid fa-tasks', name: 'Scrum' },
+      { icon: 'fa-solid fa-list-check', name: 'SDLC' },
       { icon: 'fa-solid fa-sitemap', name: 'UML' },
     ],
   },

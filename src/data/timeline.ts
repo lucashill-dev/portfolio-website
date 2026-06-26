@@ -9,19 +9,18 @@ export interface TimelineItem {
 export const education: TimelineItem[] = [
   {
     icon: 'fa-solid fa-university',
-    date: '2022 - Present',
+    date: '2024 - Present',
     title: 'University of Michigan - Flint',
     role: 'Bachelor of Science, Double Major in Computer Science and Software Engineering',
     bullets: [
-      "Cumulative GPA: 3.96/4.0; Dean's List 2024-2025",
-      'Relevant Coursework: Data Structures, Software Engineering, Discrete Structures',
-      'Currently enrolled in Theory of Computation and Software Construction',
-      'Expected graduation: April 2028',
+      "Cumulative GPA: 3.95/4.0; Dean's List",
+      'Relevant Coursework: Data Structures, Software Engineering, Discrete Structures, Operating Systems, Software Construction',
+      'Expected graduation: December 2027',
     ],
   },
   {
     icon: 'fa-solid fa-school',
-    date: '2022 - 2023',
+    date: 'Sep 2022 - Jun 2023',
     title: 'Genesee Career Institute',
     role: 'Game Programming',
     bullets: [
@@ -37,7 +36,7 @@ export const work: TimelineItem[] = [
     icon: 'fa-solid fa-building',
     date: 'Aug 2024 - Present',
     title: 'UM-Flint Recreation Center',
-    role: 'Assistant Facilities Supervisor',
+    role: 'Member Services Assistant → Assistant Facilities Supervisor (Dec 2024)',
     bullets: [
       'Contributed to hiring process for professional staff by reviewing applications and conducting structured interviews',
       'Oversaw day-to-day operations including opening/closing procedures and monitoring student staff',

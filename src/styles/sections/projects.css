@@ -7,6 +7,7 @@
 }
 
 .project-card {
+    display: block;
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-lg);
@@ -15,6 +16,11 @@
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     opacity: 0;
+    cursor: default;
+}
+
+a.project-card {
+    cursor: pointer;
 }
 
 main section.animate-in .project-card {
@@ -88,18 +94,18 @@ main section.animate-in .project-card {
     font-size: 14px;
     font-weight: 600;
     color: var(--accent);
+    transition: color 0.25s ease;
 }
 
-.project-link:hover {
+.project-card:hover .project-link {
     color: var(--accent-strong);
 }
 
 .project-link--private {
     color: var(--text-muted);
-    cursor: default;
 }
 
-.project-link--private:hover {
+.project-card:hover .project-link--private {
     color: var(--text-muted);
 }
 

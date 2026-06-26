@@ -1,4 +1,5 @@
 import './style.css';
+import { inject } from '@vercel/analytics';
 import { renderNav } from './components/nav';
 import { renderProgressBar, initProgressBar } from './components/progressBar';
 import { renderBackToTop, initBackToTop } from './components/backToTop';
@@ -32,3 +33,4 @@ initSmoothScrollLinks();
 initScrollAnimations();
 initImageFadeIn();
 initCardGlow();
+inject();

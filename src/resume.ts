@@ -1,4 +1,5 @@
 import './style.css';
+import { inject } from '@vercel/analytics';
 import { renderNav } from './components/nav';
 import { renderBackToTop, initBackToTop } from './components/backToTop';
 import { initImageFadeIn } from './components/scrollAnimations';
@@ -37,3 +38,4 @@ app.innerHTML = `
 
 initBackToTop();
 initImageFadeIn();
+inject();

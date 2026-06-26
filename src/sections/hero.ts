@@ -38,7 +38,7 @@ export function renderHero(): string {
           <span class="greeting">Hey, I'm Lucas</span>
           <span class="wave">👋</span>
         </h1>
-        <p class="hero-description">I'm a Software Engineering student at UM-Flint with a 3.96 GPA, specializing in system design, software architecture, and Agile development. I have strong foundations in Java and C# with experience in full SDLC documentation and collaborative problem-solving.</p>
+        <p class="hero-description">I'm a Software Engineering student at UM-Flint with a 3.95 GPA, specializing in system design, software architecture, and Agile development. I have strong foundations in Java and C# with experience in full SDLC documentation and collaborative problem-solving.</p>
 
         <div class="links">
           ${heroLinks.map(renderHeroLink).join('')}
@@ -47,7 +47,7 @@ export function renderHero(): string {
 
       <div class="headshot">
         <div class="headshot-container">
-          <img src="/images/hero-headshot.webp" alt="Lucas Hill Headshot" loading="eager">
+          <img src="/images/hero-headshot.webp" alt="Lucas Hill Headshot" loading="eager" width="200" height="200">
           <div class="headshot-glow"></div>
         </div>
       </div>

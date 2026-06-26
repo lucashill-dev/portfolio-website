@@ -15,7 +15,7 @@ const navLinks: NavLink[] = [
 function renderLink(link: NavLink): string {
   const attrs = link.external ? ' target="_blank" rel="noopener noreferrer"' : '';
   return `
-    <a href="${link.href}"${attrs}>
+    <a href="${link.href}"${attrs} aria-label="${link.label}">
       <i class="${link.icon}" aria-hidden="true"></i>
       <span>${link.label}</span>
     </a>`;

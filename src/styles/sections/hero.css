@@ -47,6 +47,8 @@
 .hero-section .headshot img {
     border-radius: 50%;
     width: 190px;
+    height: auto;
+    aspect-ratio: 1 / 1;
     border: 3px solid var(--accent);
     box-shadow: var(--shadow-md);
     position: relative;
