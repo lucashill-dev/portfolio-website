@@ -32,18 +32,21 @@ main section.animate-in .project-card {
     border-color: var(--accent);
 }
 
-.project-image {
-    height: 180px;
+.project-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: var(--radius-md);
     background: var(--gradient-secondary);
+    border: 1px solid var(--glass-border);
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-bottom: 18px;
 }
 
-.project-placeholder {
-    font-size: 44px;
+.project-icon i {
+    font-size: 18px;
     color: var(--accent);
-    opacity: 0.85;
 }
 
 .project-content {

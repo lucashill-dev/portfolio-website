@@ -27,12 +27,10 @@ export function renderProjects(): string {
           .map(
             (project) => `
           <article class="project-card glow-card">
-            <div class="project-image">
-              <div class="project-placeholder">
+            <div class="project-content">
+              <div class="project-icon">
                 <i class="${project.icon}"></i>
               </div>
-            </div>
-            <div class="project-content">
               <h3>${project.title}</h3>
               <p>${project.description}</p>
               <div class="project-tech">
