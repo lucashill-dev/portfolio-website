@@ -990,6 +990,78 @@ nav .right a span {
 
 
 
+/* Resume Section */
+.resume-section {
+    padding: 0 40px;
+    margin-bottom: 120px;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.back-link:hover {
+    color: var(--maize-primary);
+    transform: translateX(-3px);
+}
+
+.resume-section h2 {
+    text-align: center;
+    font-size: 35px;
+    margin-bottom: 40px;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.resume-actions {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.resume-viewer {
+    max-width: 850px;
+    margin: 0 auto;
+    height: 80vh;
+    min-height: 500px;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    background: var(--glass-bg);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.resume-viewer embed {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+@media (max-width: 650px) {
+    .resume-section {
+        padding: 0 30px;
+    }
+
+    .resume-viewer {
+        height: 70vh;
+    }
+}
+
+@media (max-width: 550px) {
+    .resume-section {
+        padding: 0 20px;
+    }
+}
+
 /* Responsive Design */
 @media (max-width: 725px) {
     .hero-section .text h2 {
