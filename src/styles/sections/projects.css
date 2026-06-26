@@ -86,6 +86,17 @@ main section.animate-in .project-card {
     font-weight: 500;
 }
 
+.project-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.project-links .project-link {
+    margin-top: 0;
+}
+
 .project-link {
     display: inline-flex;
     align-items: center;
@@ -97,16 +108,24 @@ main section.animate-in .project-card {
     transition: color 0.25s ease;
 }
 
-.project-card:hover .project-link {
+.project-link:hover {
     color: var(--accent-strong);
+    text-decoration: underline;
+}
+
+.project-link--report {
+    cursor: pointer;
+    position: relative;
+    z-index: 3;
 }
 
 .project-link--private {
     color: var(--text-muted);
 }
 
-.project-card:hover .project-link--private {
+.project-link--private:hover {
     color: var(--text-muted);
+    text-decoration: none;
 }
 
 @media (max-width: 725px) {

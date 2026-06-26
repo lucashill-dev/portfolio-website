@@ -1,6 +1,19 @@
 import { projects, type Project } from '../data/projects';
 
-function renderProjectLink(project: Project): string {
+function renderProjectLinks(project: Project): string {
+  if (project.link && project.report) {
+    return `
+      <div class="project-links">
+        <span class="project-link">
+          <i class="fa-brands fa-github" aria-hidden="true"></i>
+          <span>View Code</span>
+        </span>
+        <span class="project-link project-link--report" data-report-url="${project.report}">
+          <i class="fa-solid fa-file-lines" aria-hidden="true"></i>
+          <span>Final Report</span>
+        </span>
+      </div>`;
+  }
   if (project.link) {
     return `
       <span class="project-link">
@@ -29,7 +42,7 @@ function renderProjectCard(project: Project): string {
       <div class="project-tech">
         ${project.tech.map((tag) => `<span class="tech-tag">${tag}</span>`).join('')}
       </div>
-      ${renderProjectLink(project)}
+      ${renderProjectLinks(project)}
     </div>`;
 
   if (project.link) {
@@ -50,4 +63,16 @@ export function renderProjects(): string {
         ${projects.map(renderProjectCard).join('')}
       </div>
     </section>`;
+}
+
+export function initProjectReportLinks(): void {
+  const reportLinks = document.querySelectorAll<HTMLElement>('.project-link--report');
+  reportLinks.forEach((link) => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      const url = link.dataset.reportUrl;
+      if (url) window.open(url, '_blank', 'noopener');
+    });
+  });
 }

@@ -4,6 +4,7 @@ export interface Project {
   tech: string[];
   icon: string;
   link?: string;
+  report?: string;
   private?: boolean;
 }
 
@@ -15,6 +16,15 @@ export const projects: Project[] = [
     tech: ['SDLC', 'UML', 'Scrum', 'Documentation'],
     icon: 'fa-solid fa-file-alt',
     private: true,
+  },
+  {
+    title: 'OS Component Simulator',
+    description:
+      'Collaborated with a 3-person team to build a Java-based operating system simulator modeling process management, round-robin CPU scheduling, paged virtual memory with demand paging, and a persistent simulated file system, all driven through a custom CLI shell with full automated test coverage.',
+    tech: ['Java', 'Maven', 'JUnit', 'Operating Systems'],
+    icon: 'fa-solid fa-terminal',
+    link: 'https://github.com/aharalam/csc377-semester-project',
+    report: 'https://docs.google.com/document/d/1ksikfWp_83qLPLbha2Mag0HHgZM20e4Je_W_9pZBB2k/edit?tab=t.0',
   },
   {
     title: 'Geospatial Claim Visualization Tool',
