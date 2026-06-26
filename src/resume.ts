@@ -3,6 +3,7 @@ import { inject } from '@vercel/analytics';
 import { renderNav } from './components/nav';
 import { renderBackToTop, initBackToTop } from './components/backToTop';
 import { initImageFadeIn } from './components/scrollAnimations';
+import { initDevConsoleMessage } from './components/devConsole';
 
 const app = document.getElementById('app');
 if (!app) throw new Error('#app mount point not found');
@@ -38,4 +39,5 @@ app.innerHTML = `
 
 initBackToTop();
 initImageFadeIn();
+initDevConsoleMessage();
 inject();
