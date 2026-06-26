@@ -116,6 +116,22 @@ main section.animate-in .project-card {
     text-decoration: underline;
 }
 
+a.project-card:hover .project-link:not(.project-link--report) {
+    color: var(--accent-strong);
+}
+
+a.project-card:hover .project-link:not(.project-link--report) span {
+    text-decoration: underline;
+}
+
+a.project-card:has(.project-link--report:hover) .project-link:not(.project-link--report) {
+    color: var(--accent);
+}
+
+a.project-card:has(.project-link--report:hover) .project-link:not(.project-link--report) span {
+    text-decoration: none;
+}
+
 .project-link--report {
     cursor: pointer;
     position: relative;
@@ -128,6 +144,9 @@ main section.animate-in .project-card {
 
 .project-link--private:hover {
     color: var(--text-muted);
+}
+
+.project-link--private:hover span {
     text-decoration: none;
 }
 

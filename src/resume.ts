@@ -1,6 +1,7 @@
 import './style.css';
 import { inject } from '@vercel/analytics';
 import { renderNav } from './components/nav';
+import { renderFooter } from './components/footer';
 import { renderBackToTop, initBackToTop } from './components/backToTop';
 import { initImageFadeIn } from './components/scrollAnimations';
 import { initDevConsoleMessage } from './components/devConsole';
@@ -35,7 +36,8 @@ app.innerHTML = `
         <embed src="/resume/Lucas-Hill-Resume.pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit" type="application/pdf">
       </div>
     </section>
-  </main>`;
+  </main>
+  ${renderFooter()}`;
 
 initBackToTop();
 initImageFadeIn();

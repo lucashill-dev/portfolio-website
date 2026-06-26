@@ -1,6 +1,7 @@
 import './style.css';
 import { inject } from '@vercel/analytics';
 import { renderNav } from './components/nav';
+import { renderFooter } from './components/footer';
 import { renderProgressBar, initProgressBar } from './components/progressBar';
 import { renderBackToTop, initBackToTop } from './components/backToTop';
 import { initScrollAnimations, initImageFadeIn, initSmoothScrollLinks } from './components/scrollAnimations';
@@ -26,7 +27,8 @@ app.innerHTML = `
     ${renderExperience()}
     ${renderSkills()}
     ${renderContact()}
-  </main>`;
+  </main>
+  ${renderFooter()}`;
 
 initProgressBar();
 initBackToTop();
