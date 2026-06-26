@@ -1,0 +1,44 @@
+.cta-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 13px 26px;
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-md);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.25s ease, color 0.25s ease, border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+    margin: 0 8px 8px 0;
+    background: var(--glass-bg);
+    color: var(--text);
+    backdrop-filter: blur(10px);
+}
+
+.cta-button:hover {
+    background: var(--accent-gradient);
+    color: #15110a;
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(245, 158, 11, 0.25);
+}
+
+.cta-button:hover i,
+.cta-button:hover span {
+    color: #15110a;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 15px;
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.back-link:hover {
+    color: var(--accent);
+    transform: translateX(-3px);
+}
