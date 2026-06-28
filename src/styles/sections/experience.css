@@ -109,11 +109,17 @@
     justify-content: center;
     border: 3px solid var(--bg);
     box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.25s ease, transform 0.25s ease;
 }
 
 .timeline-logo i {
     font-size: 18px;
     color: var(--on-accent);
+}
+
+.timeline-item:hover .timeline-logo {
+    transform: scale(1.08);
+    box-shadow: var(--shadow-sm), 0 0 0 6px rgba(166, 184, 218, 0.18);
 }
 
 .timeline-content {

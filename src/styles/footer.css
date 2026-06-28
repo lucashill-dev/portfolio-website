@@ -1,7 +1,17 @@
 .site-footer {
+    position: relative;
     text-align: center;
     padding: 40px 24px 32px;
-    border-top: 1px solid var(--glass-border);
+}
+
+.site-footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(to right, transparent, rgba(166, 184, 218, 0.4), transparent);
 }
 
 .site-footer p {
