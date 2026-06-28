@@ -9,7 +9,7 @@ nav {
     max-width: 95%;
     margin: 0 auto 50px;
     height: 56px;
-    background: var(--glass-bg);
+    background: var(--nav-bg);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid var(--glass-border);
@@ -45,7 +45,7 @@ nav .right a {
 }
 
 nav .right a:hover {
-    background: var(--glass-bg);
+    background: var(--nav-bg);
     border: 1px solid var(--glass-border);
     transform: translateY(-1px);
     color: var(--text);

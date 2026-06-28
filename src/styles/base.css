@@ -7,12 +7,17 @@
 
 html {
     scroll-behavior: smooth;
+    background-color: var(--bg);
+    background-image:
+        linear-gradient(rgba(241, 243, 248, 0.035) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(241, 243, 248, 0.035) 1px, transparent 1px),
+        linear-gradient(135deg, var(--bg) 0%, var(--bg-secondary) 50%, var(--bg-tertiary) 100%);
+    background-size: 40px 40px, 40px 40px, 100% 100%;
+    background-attachment: fixed, fixed, fixed;
 }
 
 body {
     font-family: var(--font-primary);
-    background: var(--bg);
-    background: linear-gradient(135deg, var(--bg) 0%, var(--bg-secondary) 50%, var(--bg-tertiary) 100%);
     max-width: 1000px;
     margin: 0 auto;
     line-height: 1.6;

@@ -18,8 +18,9 @@
     --gradient-primary: linear-gradient(135deg, var(--bg) 0%, var(--bg-tertiary) 100%);
     --gradient-secondary: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
 
-    --glass-bg: rgba(241, 243, 248, 0.04);
+    --glass-bg: rgba(32, 38, 52, 0.92);
     --glass-border: rgba(241, 243, 248, 0.08);
+    --nav-bg: rgba(241, 243, 248, 0.04);
     --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.25);
     --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.3);
 

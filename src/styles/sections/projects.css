@@ -6,7 +6,7 @@
     scroll-snap-type: x proximity;
     max-width: 1000px;
     margin: 0 auto;
-    padding: 4px 24px 28px;
+    padding: 24px 24px 28px;
     -webkit-mask-image: linear-gradient(to right, transparent, black 32px, black calc(100% - 32px), transparent);
     mask-image: linear-gradient(to right, transparent, black 32px, black calc(100% - 32px), transparent);
     scrollbar-width: thin;
@@ -177,7 +177,7 @@ a.project-card:has(.project-link--report:hover) .project-link:not(.project-link-
 @media (max-width: 725px) {
     .projects-grid {
         gap: 18px;
-        padding: 4px 30px 28px;
+        padding: 24px 30px 28px;
         -webkit-mask-image: linear-gradient(to right, transparent, black 30px, black calc(100% - 30px), transparent);
         mask-image: linear-gradient(to right, transparent, black 30px, black calc(100% - 30px), transparent);
     }
