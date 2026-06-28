@@ -5,7 +5,7 @@ export function renderContact(): string {
       <div class="contact-content">
         <div class="contact-text">
           <h3>Let's work together!</h3>
-          <p>I'm always interested in new opportunities and exciting projects. Whether you have a question about my work, want to collaborate on something amazing, or just want to say hello, I'd love to hear from you!</p>
+          <p>I'm always interested in new opportunities and exciting projects. Whether you're hiring, have a question about my work, or just want to say hello, I'd love to hear from you!</p>
         </div>
 
         <div class="contact-actions">

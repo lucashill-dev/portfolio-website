@@ -38,7 +38,7 @@ export function renderHero(): string {
           <span class="greeting">Hey, I'm Lucas</span>
           <span class="wave">👋</span>
         </h1>
-        <p class="hero-description">I'm a Software Engineering student at UM-Flint with a 3.95 GPA, specializing in system design, software architecture, and Agile development. I have strong foundations in Java and C# with experience in full SDLC documentation and collaborative problem-solving.</p>
+        <p class="hero-description">Software Engineering student at UM-Flint (3.95 GPA) building clean, reliable systems in Java and C#. I'm looking for a software engineering internship where I can put real SDLC experience and Agile teamwork to work on something that actually ships.</p>
 
         <div class="links">
           ${heroLinks.map(renderHeroLink).join('')}
