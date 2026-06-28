@@ -3,7 +3,7 @@ import { inject } from '@vercel/analytics';
 import { renderNav } from './components/nav';
 import { renderFooter } from './components/footer';
 import { renderBackToTop, initBackToTop } from './components/backToTop';
-import { initImageFadeIn } from './components/scrollAnimations';
+import { initImageFadeIn, initScrollAnimations } from './components/scrollAnimations';
 import { initDevConsoleMessage } from './components/devConsole';
 
 const app = document.getElementById('app');
@@ -40,6 +40,7 @@ app.innerHTML = `
   ${renderFooter()}`;
 
 initBackToTop();
+initScrollAnimations();
 initImageFadeIn();
 initDevConsoleMessage();
 inject();
