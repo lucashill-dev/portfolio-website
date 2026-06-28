@@ -62,7 +62,24 @@ export function renderProjects(): string {
       <div class="projects-grid">
         ${projects.map(renderProjectCard).join('')}
       </div>
+      <p class="projects-scroll-hint">
+        <i class="fa-solid fa-arrows-left-right" aria-hidden="true"></i>
+        <span>Scroll for more</span>
+      </p>
     </section>`;
+}
+
+export function initProjectsScrollHint(): void {
+  const grid = document.querySelector<HTMLElement>('.projects-grid');
+  const hint = document.querySelector<HTMLElement>('.projects-scroll-hint');
+  if (!grid || !hint) return;
+
+  const updateHint = () => {
+    hint.classList.toggle('visible', grid.scrollWidth > grid.clientWidth + 1);
+  };
+
+  updateHint();
+  window.addEventListener('resize', updateHint);
 }
 
 export function initProjectReportLinks(): void {

@@ -26,6 +26,24 @@
     background: transparent;
 }
 
+.projects-scroll-hint {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 4px;
+    font-size: 13px;
+    color: var(--text-muted);
+}
+
+.projects-scroll-hint.visible {
+    display: flex;
+}
+
+.projects-scroll-hint i {
+    font-size: 12px;
+}
+
 .project-card {
     display: block;
     flex: 1 1 calc((100% - 48px) / 3);
