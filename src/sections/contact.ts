@@ -13,16 +13,16 @@ export function renderContact(): string {
             <i class="fa-solid fa-envelope"></i>
             <span>contact.lucashill@gmail.com</span>
           </a>
-          <p class="contact-note">Click to send me an email directly</p>
+          <p class="contact-note">Click to send me an email directly &middot; I typically respond within 24 hours</p>
 
           <div class="contact-info-grid">
             <div class="contact-info-item">
               <i class="fa-solid fa-location-dot"></i>
               <span>Flint, Michigan</span>
             </div>
-            <div class="contact-info-item">
-              <i class="fa-solid fa-clock"></i>
-              <span>Open to new opportunities</span>
+            <div class="contact-info-item contact-info-item--status">
+              <span class="status-dot" aria-hidden="true"></span>
+              <span>Open to internships</span>
             </div>
           </div>
         </div>
