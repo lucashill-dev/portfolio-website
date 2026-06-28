@@ -19,14 +19,15 @@
 }
 
 .skill-category {
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: var(--radius-lg);
-    padding: 28px;
-    backdrop-filter: blur(10px);
-    overflow: hidden;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--glass-border);
     opacity: 0;
     transition: opacity 0.5s ease;
+}
+
+.skill-category:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
 }
 
 main section.animate-in .skill-category {
@@ -41,75 +42,47 @@ main section.animate-in .skill-category {
     display: flex;
     align-items: center;
     gap: 12px;
-    font-size: 1.4rem;
-    margin-bottom: 22px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 18px;
     color: var(--accent);
 }
 
 .category-title i {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
 }
 
 .cells {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    gap: 16px;
-}
-
-.cell {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 10px;
-    width: 150px;
-    padding: 16px 18px;
+}
+
+.skill-tag {
+    padding: 7px 16px;
     border: 1px solid var(--glass-border);
-    border-radius: 12px;
+    border-radius: 20px;
     background: var(--glass-bg);
-    transition: border-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
-}
-
-.cell:hover {
-    border-color: var(--accent);
-    transform: translateY(-3px);
-    box-shadow: 0 10px 24px rgba(166, 184, 218, 0.15);
-}
-
-.cell span {
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 500;
-}
-
-.cell i {
-    font-size: 20px;
     color: var(--text-secondary);
-    width: 24px;
-    text-align: center;
-    transition: color 0.25s ease;
+    transition: border-color 0.25s ease, color 0.25s ease;
 }
 
-.cell:hover i {
-    color: var(--accent);
+.skill-tag:hover {
+    border-color: var(--accent);
+    color: var(--text);
 }
 
 @media (max-width: 768px) {
     .skills-categories {
         gap: 26px;
     }
-
-    .skill-category {
-        padding: 20px;
-    }
 }
 
 @media (max-width: 550px) {
-    .cell {
-        width: 130px;
-        padding: 14px 16px;
-    }
-
-    .cell span {
+    .skill-tag {
         font-size: 13px;
+        padding: 6px 14px;
     }
 }

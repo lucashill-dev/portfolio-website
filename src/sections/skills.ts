@@ -12,21 +12,13 @@ export function renderSkills(): string {
         ${skillCategories
           .map(
             (category) => `
-          <div class="skill-category glow-card">
+          <div class="skill-category">
             <h3 class="category-title">
               <i class="${category.icon}"></i>
               ${category.title}
             </h3>
             <div class="cells">
-              ${category.skills
-                .map(
-                  (skill) => `
-                <div class="cell">
-                  <i class="${skill.icon}"></i>
-                  <span>${skill.name}</span>
-                </div>`
-                )
-                .join('')}
+              ${category.skills.map((skill) => `<span class="skill-tag">${skill}</span>`).join('')}
             </div>
           </div>`
           )
