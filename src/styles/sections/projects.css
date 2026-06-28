@@ -1,13 +1,36 @@
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    display: flex;
     gap: 24px;
+    overflow-x: auto;
+    overflow-y: visible;
+    scroll-snap-type: x proximity;
     max-width: 1000px;
     margin: 0 auto;
+    padding: 4px 24px 28px;
+    -webkit-mask-image: linear-gradient(to right, transparent, black 32px, black calc(100% - 32px), transparent);
+    mask-image: linear-gradient(to right, transparent, black 32px, black calc(100% - 32px), transparent);
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) transparent;
+}
+
+.projects-grid::-webkit-scrollbar {
+    height: 6px;
+}
+
+.projects-grid::-webkit-scrollbar-thumb {
+    background: var(--accent);
+    border-radius: 10px;
+}
+
+.projects-grid::-webkit-scrollbar-track {
+    background: transparent;
 }
 
 .project-card {
     display: block;
+    flex: 1 1 calc((100% - 48px) / 3);
+    min-width: 240px;
+    scroll-snap-align: center;
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: var(--radius-lg);
@@ -153,7 +176,13 @@ a.project-card:has(.project-link--report:hover) .project-link:not(.project-link-
 
 @media (max-width: 725px) {
     .projects-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 18px;
+        padding: 4px 30px 28px;
+        -webkit-mask-image: linear-gradient(to right, transparent, black 30px, black calc(100% - 30px), transparent);
+        mask-image: linear-gradient(to right, transparent, black 30px, black calc(100% - 30px), transparent);
+    }
+
+    .project-card {
+        flex: 0 0 84vw;
     }
 }
