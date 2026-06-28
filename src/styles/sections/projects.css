@@ -78,8 +78,9 @@ main section.animate-in .project-card {
 }
 
 .tech-tag {
-    background: var(--accent);
-    color: var(--on-accent);
+    background: var(--glass-bg);
+    border: 1px solid rgba(166, 184, 218, 0.35);
+    color: var(--accent);
     padding: 5px 12px;
     border-radius: 20px;
     font-size: 12px;

@@ -95,8 +95,13 @@
 
 .contact-info-item i {
     font-size: 15px;
-    color: var(--accent);
+    color: var(--text-secondary);
     flex-shrink: 0;
+    transition: color 0.25s ease;
+}
+
+.contact-info-item:hover i {
+    color: var(--accent);
 }
 
 @media (max-width: 550px) {
