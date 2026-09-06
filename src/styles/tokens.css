@@ -1,46 +1,69 @@
 :root {
-    --bg: #11141c;
-    --bg-secondary: #171b26;
-    --bg-tertiary: #1d2230;
+    /* ---- Color -------------------------------------------------------
+       Near-black with a blue cast. One accent, used for section labels,
+       figure numerals, figure-caption tags and link hover. Never a fill
+       behind text, never a glow. Figure panels get their own deeper blue
+       so an artifact reads as a plate, not a card. */
+    --bg: #0d0f12;
+    --figure-bg: #111a28;
+    --figure-bg-inset: #0d1520;
+    --figure-border: #1f3050;
 
-    --text: #f1f3f8;
-    --text-secondary: rgba(241, 243, 248, 0.75);
-    --text-muted: rgba(241, 243, 248, 0.55);
+    --text: #ecebe6;
+    --text-secondary: #c8c9c6;
+    --text-muted: #9a9c9f;
+    --text-faint: #78859a;
 
-    /* Dusty lavender-blue: single accent — headings, links, buttons, badges, interactive states */
-    --accent: #a6b8da;
-    --accent-strong: #8a9bd6;
-    --on-accent: #0d1018;
+    --accent: #8fb3ea;
+    --rule: #232830;
 
-    --border-color: rgba(241, 243, 248, 0.08);
-    --border-color-hover: rgba(241, 243, 248, 0.16);
+    /* ---- Type --------------------------------------------------------
+       IBM Plex, self-hosted (see fonts.css). Sans carries prose, Mono
+       carries anything indexical (labels, dates, captions, facts,
+       terminal), Serif carries the name and the three project headlines. */
+    --font-sans: 'Plex Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+    --font-mono: 'Plex Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    --font-serif: 'Plex Serif', Georgia, 'Times New Roman', serif;
 
-    --gradient-primary: linear-gradient(135deg, var(--bg) 0%, var(--bg-tertiary) 100%);
-    --gradient-secondary: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+    /* Scale. Every step is a decision, not a ratio.
+       Phone values live in the clamp() minimums. */
+    --size-name: clamp(34px, 4vw, 44px);
+    --size-headline: clamp(26px, 2.6vw, 34px);
+    --size-numeral: clamp(44px, 4vw, 56px);
+    --size-dek: clamp(17px, 1.4vw, 19px);
+    --size-body: 16px;
+    --size-body-sm: 15px;
+    --size-label: 12px;
+    --size-mono: 13px;
+    --size-mono-sm: 12px;
 
-    --glass-bg: rgba(32, 38, 52, 0.92);
-    --glass-border: rgba(241, 243, 248, 0.08);
-    --nav-bg: rgba(241, 243, 248, 0.04);
-    --shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.25);
-    --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.3);
+    --leading-tight: 1.1;
+    --leading-snug: 1.45;
+    --leading-body: 1.55;
 
-    --font-primary: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    --font-display: 'Fraunces', Georgia, serif;
+    --track-label: 0.08em;
 
-    --spacing-xs: 0.5rem;
-    --spacing-sm: 1rem;
-    --spacing-md: 1.5rem;
-    --spacing-lg: 2rem;
-    --spacing-xl: 3rem;
-    --spacing-2xl: 4rem;
+    /* ---- Space -------------------------------------------------------
+       A 4px base. Named for role so section rhythm stays consistent. */
+    --space-1: 4px;
+    --space-2: 8px;
+    --space-3: 12px;
+    --space-4: 16px;
+    --space-5: 24px;
+    --space-6: 32px;
+    --space-7: 48px;
+    --space-8: 64px;
 
-    --radius-sm: 8px;
-    --radius-md: 12px;
-    --radius-lg: 16px;
-    --radius-xl: 20px;
+    /* Fluid, so a fixed sidebar plus a fixed facts column cannot starve
+       the figure column at middle widths. */
+    --sidebar-width: clamp(300px, 30vw, 400px);
 }
 
 @media (prefers-reduced-motion: reduce) {
-    html { scroll-behavior: auto; }
-    *, *::before, *::after { transition: none !important; animation: none !important; }
+    *,
+    *::before,
+    *::after {
+        transition: none !important;
+        animation: none !important;
+    }
 }

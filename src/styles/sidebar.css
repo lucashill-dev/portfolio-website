@@ -1,0 +1,141 @@
+/* The left column: only the person. Sticky on desktop so the photo and
+   the email stay on screen while the reader works through the projects. */
+
+.sidebar {
+    position: sticky;
+    top: 0;
+    align-self: start;
+    /* Fixed to the viewport height so the dividing rule runs the full
+       screen instead of stopping under the colophon. */
+    height: 100dvh;
+    overflow-y: auto;
+    padding: var(--space-7) var(--space-6) var(--space-7) var(--space-8);
+    border-right: 1px solid var(--rule);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+    scrollbar-width: thin;
+    scrollbar-color: var(--rule) transparent;
+}
+
+.portrait {
+    padding: var(--space-2);
+    width: max-content;
+}
+
+.portrait img {
+    width: 184px;
+    height: 184px;
+    object-fit: cover;
+    object-position: 50% 25%;
+}
+
+.identity {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.identity h1 {
+    font-family: var(--font-serif);
+    font-size: var(--size-name);
+    font-weight: 600;
+    line-height: var(--leading-tight);
+    letter-spacing: -0.02em;
+}
+
+.lede {
+    color: var(--text-secondary);
+    line-height: var(--leading-snug);
+}
+
+.seeking {
+    font-family: var(--font-mono);
+    font-size: var(--size-label);
+    font-weight: 500;
+    letter-spacing: var(--track-label);
+    text-transform: uppercase;
+    line-height: 1.7;
+    color: var(--text);
+}
+
+.seeking span {
+    display: block;
+    color: var(--text-muted);
+    text-transform: none;
+    letter-spacing: 0;
+    font-size: var(--size-mono-sm);
+    margin-top: var(--space-1);
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.contact p {
+    color: var(--text-secondary);
+    line-height: var(--leading-snug);
+}
+
+.elsewhere {
+    font-family: var(--font-mono);
+    font-size: var(--size-mono);
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+}
+
+.colophon {
+    font-family: var(--font-mono);
+    font-size: var(--size-mono-sm);
+    line-height: var(--leading-snug);
+    color: var(--text-faint);
+    margin-top: auto;
+    padding-top: var(--space-4);
+}
+
+/* Phone: the sidebar stops being a column and becomes a header. The photo
+   sits beside the name so the first screen is name, face, and the ask. */
+@media (max-width: 900px) {
+    .sidebar {
+        position: static;
+        height: auto;
+        overflow: visible;
+        border-right: 0;
+        border-bottom: 1px solid var(--rule);
+        padding: var(--space-6) var(--space-5);
+        gap: var(--space-4);
+    }
+
+    .sidebar-head {
+        display: flex;
+        align-items: flex-end;
+        gap: var(--space-4);
+    }
+
+    .portrait {
+        flex-shrink: 0;
+    }
+
+    .portrait img {
+        width: 104px;
+        height: 104px;
+    }
+
+    .colophon {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 560px) {
+    .sidebar {
+        padding: var(--space-5) var(--space-4);
+    }
+
+    .portrait img {
+        width: 92px;
+        height: 92px;
+    }
+}

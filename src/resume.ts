@@ -1,46 +1,27 @@
 import './style.css';
 import { inject } from '@vercel/analytics';
-import { renderNav } from './components/nav';
-import { renderFooter } from './components/footer';
-import { renderBackToTop, initBackToTop } from './components/backToTop';
-import { initImageFadeIn, initScrollAnimations } from './components/scrollAnimations';
-import { initDevConsoleMessage } from './components/devConsole';
+
+const PDF = '/resume/Lucas-Hill-Resume.pdf';
 
 const app = document.getElementById('app');
 if (!app) throw new Error('#app mount point not found');
 
 app.innerHTML = `
-  ${renderBackToTop()}
-  ${renderNav()}
-  <main>
-    <section class="resume-section">
-      <a href="/" class="back-link">
-        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
-        <span>Back to Portfolio</span>
-      </a>
+  <div class="resume">
+    <p class="elsewhere"><a href="/">&larr; Lucas Hill</a></p>
 
-      <h2>Resume</h2>
+    <h1>Resume</h1>
 
-      <div class="resume-actions">
-        <a href="/resume/Lucas-Hill-Resume.pdf" download class="cta-button">
-          <i class="fa-solid fa-download" aria-hidden="true"></i>
-          <span>Download PDF</span>
-        </a>
-        <a href="/resume/Lucas-Hill-Resume.pdf" target="_blank" rel="noopener noreferrer" class="cta-button">
-          <i class="fa-solid fa-up-right-from-square" aria-hidden="true"></i>
-          <span>Open in New Tab</span>
-        </a>
-      </div>
+    <div class="resume-actions">
+      <a class="action" href="${PDF}" download>Download PDF</a>
+      <a class="action" href="${PDF}" target="_blank" rel="noopener noreferrer">Open in a new tab</a>
+    </div>
 
-      <div class="resume-viewer">
-        <embed src="/resume/Lucas-Hill-Resume.pdf#toolbar=0&navpanes=0&scrollbar=0&view=Fit" type="application/pdf">
-      </div>
-    </section>
-  </main>
-  ${renderFooter()}`;
+    <p class="resume-note">One page. Last updated September 2026.</p>
 
-initBackToTop();
-initScrollAnimations();
-initImageFadeIn();
-initDevConsoleMessage();
+    <div class="resume-viewer">
+      <embed src="${PDF}#toolbar=0&navpanes=0&scrollbar=0&view=Fit" type="application/pdf">
+    </div>
+  </div>`;
+
 inject();
