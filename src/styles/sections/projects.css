@@ -268,3 +268,10 @@
 .projects {
     margin-top: var(--space-6);
 }
+
+/* Same hit-area treatment as the sidebar links. */
+.facts-links a {
+    display: inline-block;
+    padding: 12px 0;
+    margin: -12px 0;
+}

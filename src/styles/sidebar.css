@@ -139,3 +139,16 @@
         height: 92px;
     }
 }
+
+/* Text links in these rows are ~19px tall, well under the 44px a thumb
+   needs. Padding grows the hit area; the negative margin keeps the
+   layout exactly where it was. */
+.elsewhere a {
+    display: inline-block;
+    padding: 12px 0;
+    margin: -12px 0;
+}
+
+.contact p a {
+    padding: 12px 0;
+}
