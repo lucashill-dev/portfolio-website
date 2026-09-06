@@ -162,3 +162,78 @@ summary:focus-visible {
 .section > .label + .section-note {
     margin-top: 0;
 }
+
+/* Visually hidden, still announced. */
+.vh {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+}
+
+/* ---- Running head ---------------------------------------------------
+   The section label parks at the top of the viewport while you are inside
+   that section, the way a running head works in a printed report. Pure
+   position: sticky, no script. */
+.section > .label {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background: var(--bg);
+    padding: var(--space-4) 0 var(--space-2);
+    margin-top: calc(var(--space-4) * -1);
+}
+
+/* ---- Figure at full size -------------------------------------------- */
+
+.shot-zoom {
+    display: block;
+    padding: 0;
+    border: 0;
+    background: none;
+    cursor: zoom-in;
+    width: 100%;
+    text-align: left;
+}
+
+.lightbox {
+    border: 1px solid var(--figure-border);
+    background: var(--bg);
+    padding: var(--space-4);
+    /* The global margin reset kills the auto margins a modal dialog uses
+       to centre itself, so put them back explicitly. */
+    margin: auto;
+    max-width: min(94vw, 780px);
+    max-height: 92dvh;
+    overflow: auto;
+    color: var(--text);
+}
+
+.lightbox::backdrop {
+    background: rgb(0 0 0 / 0.72);
+}
+
+.lightbox-image {
+    display: block;
+    /* Natural size, never upscaled past it. */
+    cursor: zoom-out;
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid var(--figure-border);
+}
+
+.lightbox-close {
+    font-family: var(--font-mono);
+    font-size: var(--size-mono-sm);
+    letter-spacing: var(--track-label);
+    text-transform: uppercase;
+    color: var(--accent);
+    background: none;
+    border: 0;
+    padding: var(--space-2) 0 var(--space-3);
+    cursor: pointer;
+    min-height: 44px;
+}

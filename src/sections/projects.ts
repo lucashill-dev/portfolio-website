@@ -7,12 +7,18 @@ function renderArtifact(artifact: Artifact, eager: boolean): string {
   }
 
   if (artifact.kind === 'shot') {
+    // The button is what makes a figure openable at full size. Screenshots
+    // render at about 300px, which reads but is too small to study, so the
+    // artifact is only half available without this.
     return artifact.images
       .map(
         (image) => `
-        <img class="shot" src="${image.src}" alt="${esc(image.alt)}"
-             width="${image.width}" height="${image.height}"
-             loading="${eager ? 'eager' : 'lazy'}" decoding="async">`
+        <button type="button" class="shot-zoom">
+          <img class="shot" src="${image.src}" alt="${esc(image.alt)}"
+               width="${image.width}" height="${image.height}"
+               loading="${eager ? 'eager' : 'lazy'}" decoding="async">
+          <span class="vh"> — open at full size</span>
+        </button>`
       )
       .join('');
   }

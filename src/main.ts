@@ -4,6 +4,7 @@ import { renderSidebar } from './sections/sidebar';
 import { renderProjects } from './sections/projects';
 import { renderRecord } from './sections/record';
 import { renderSkills } from './sections/skills';
+import { initFigureZoom } from './lib/figureZoom';
 
 const app = document.getElementById('app');
 if (!app) throw new Error('#app mount point not found');
@@ -17,6 +18,14 @@ app.innerHTML = `
       ${renderRecord()}
       ${renderSkills()}
     </main>
-  </div>`;
+  </div>
 
+  <dialog id="figure-dialog" class="lightbox">
+    <form method="dialog">
+      <button class="lightbox-close" type="submit">Close</button>
+    </form>
+    <img class="lightbox-image" alt="">
+  </dialog>`;
+
+initFigureZoom();
 inject();
