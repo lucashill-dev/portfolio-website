@@ -126,7 +126,7 @@ export const projects: Project[] = [
       { key: 'Role', value: 'File system, test suite' },
       { key: 'Stack', value: 'Java 17, Maven, JUnit' },
       { key: 'Commits', value: '32 of 81' },
-      { key: 'When', value: 'Spring 2025' },
+      { key: 'When', value: 'Spring 2026' },
     ],
     links: [
       { label: 'Source', href: 'https://github.com/aharalam/csc377-semester-project' },
