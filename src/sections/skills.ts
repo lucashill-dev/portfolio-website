@@ -1,28 +1,18 @@
-import { skillCategories } from '../data/skills';
+import { skills } from '../data/skills';
+import { esc } from '../lib/html';
 
 export function renderSkills(): string {
   return `
-    <section id="skills" class="skills-section">
-      <h2>Skills</h2>
-      <div class="text">
-        <p>I specialize in object-oriented programming and software engineering, with strong foundations in Java and C#. My experience spans from system design and architecture to full SDLC documentation, collaborative problem-solving, and building modular software systems.</p>
-      </div>
-
-      <div class="skills-categories">
-        ${skillCategories
+    <section id="skills" class="section">
+      <h2 class="label">Skills</h2>
+      <dl class="skills">
+        ${skills
           .map(
-            (category) => `
-          <div class="skill-category">
-            <h3 class="category-title">
-              <i class="${category.icon}"></i>
-              ${category.title}
-            </h3>
-            <div class="cells">
-              ${category.skills.map((skill) => `<span class="skill-tag">${skill}</span>`).join('')}
-            </div>
-          </div>`
+            (row) => `
+          <dt>${esc(row.label)}</dt>
+          <dd${row.primary ? ' class="primary"' : ''}>${esc(row.value)}</dd>`
           )
           .join('')}
-      </div>
+      </dl>
     </section>`;
 }

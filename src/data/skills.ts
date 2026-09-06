@@ -1,28 +1,13 @@
-export interface SkillCategory {
-  icon: string;
-  title: string;
-  skills: string[];
+export interface SkillRow {
+  label: string;
+  value: string;
+  /** Languages is the row people scan for, so it gets full-strength text. */
+  primary?: boolean;
 }
 
-export const skillCategories: SkillCategory[] = [
-  {
-    icon: 'fa-solid fa-code',
-    title: 'Programming Languages',
-    skills: ['Java', 'C#', 'C++', 'Python'],
-  },
-  {
-    icon: 'fa-solid fa-tools',
-    title: 'Tools & Platforms',
-    skills: ['Git', 'Maven', 'Linux', 'VSCode', 'JetBrains IDEs'],
-  },
-  {
-    icon: 'fa-solid fa-puzzle-piece',
-    title: 'Libraries & APIs',
-    skills: ['JDA (Discord API)', 'Jsoup'],
-  },
-  {
-    icon: 'fa-solid fa-diagram-project',
-    title: 'Methodologies',
-    skills: ['Agile', 'Scrum', 'SDLC', 'UML'],
-  },
+export const skills: SkillRow[] = [
+  { label: 'Languages', value: 'Java, C#, C++, Python', primary: true },
+  { label: 'Tools', value: 'Git, Maven, Linux, JetBrains IDEs, VS Code' },
+  { label: 'Libraries', value: 'JDA, Jsoup, JUnit' },
+  { label: 'Practice', value: 'Scrum, SDLC documentation, UML' },
 ];

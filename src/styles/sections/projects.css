@@ -1,206 +1,270 @@
-.projects-grid {
-    display: flex;
-    gap: 24px;
-    overflow-x: auto;
-    overflow-y: visible;
-    scroll-snap-type: x proximity;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 24px 24px 28px;
-    -webkit-mask-image: linear-gradient(to right, transparent, black 32px, black calc(100% - 32px), transparent);
-    mask-image: linear-gradient(to right, transparent, black 32px, black calc(100% - 32px), transparent);
-    scrollbar-width: thin;
-    scrollbar-color: var(--accent) transparent;
+/* Three project spreads. Each leads with the artifact, then says what it
+   is. The figure and the facts table swap sides between spreads so the
+   page has a rhythm instead of three identical blocks. */
+
+.project {
+    display: grid;
+    grid-template-columns: 72px minmax(0, 1fr);
+    column-gap: var(--space-5);
+    padding-bottom: var(--space-8);
 }
 
-.projects-grid::-webkit-scrollbar {
-    height: 6px;
+.project + .project {
+    border-top: 1px solid var(--rule);
+    padding-top: var(--space-7);
 }
 
-.projects-grid::-webkit-scrollbar-thumb {
-    background: var(--accent);
-    border-radius: 10px;
-}
-
-.projects-grid::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.projects-scroll-hint {
-    display: none;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    margin-top: 4px;
-    font-size: 13px;
-    color: var(--text-muted);
-}
-
-.projects-scroll-hint.visible {
-    display: flex;
-}
-
-.projects-scroll-hint i {
-    font-size: 12px;
-}
-
-.project-card {
-    display: block;
-    flex: 1 1 calc((100% - 48px) / 3);
-    min-width: 240px;
-    scroll-snap-align: center;
-    background: var(--glass-bg);
-    border: 1px solid var(--glass-border);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, opacity 0.5s ease;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    opacity: 0;
-    cursor: default;
-}
-
-a.project-card {
-    cursor: pointer;
-}
-
-main section.animate-in .project-card {
-    opacity: 1;
-}
-
-.project-card:nth-child(1) { transition-delay: 0.05s; }
-.project-card:nth-child(2) { transition-delay: 0.15s; }
-.project-card:nth-child(3) { transition-delay: 0.25s; }
-.project-card:nth-child(4) { transition-delay: 0.35s; }
-
-.project-card:hover {
-    transform: translateY(-6px);
-    box-shadow: var(--shadow-md);
-    border-color: var(--accent);
-}
-
-.project-icon {
-    width: 44px;
-    height: 44px;
-    border-radius: var(--radius-md);
-    background: var(--gradient-secondary);
-    border: 1px solid var(--glass-border);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 18px;
-}
-
-.project-icon i {
-    font-size: 18px;
+.project-numeral {
+    font-family: var(--font-serif);
+    font-size: var(--size-numeral);
+    font-weight: 500;
+    line-height: 0.9;
     color: var(--accent);
 }
 
 .project-content {
-    padding: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0;
 }
 
 .project-content h3 {
-    font-size: 22px;
-    margin-bottom: 14px;
+    font-family: var(--font-serif);
+    font-size: var(--size-headline);
     font-weight: 600;
+    line-height: var(--leading-tight);
+    letter-spacing: -0.01em;
 }
 
-.project-content p {
-    margin-bottom: 18px;
+.project-dek {
+    font-size: var(--size-dek);
+    line-height: var(--leading-snug);
+    color: var(--text-secondary);
+    max-width: 62ch;
+}
+
+.project-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 244px;
+    column-gap: var(--space-5);
+    align-items: start;
+    margin-top: var(--space-2);
+}
+
+.project--flip .project-body {
+    grid-template-columns: 244px minmax(0, 1fr);
+}
+
+.project--flip .project-figure {
+    order: 2;
+}
+
+.project--flip .project-aside {
+    order: 1;
+}
+
+.project-figure {
+    min-width: 0;
+}
+
+.project-aside {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+.project-aside p {
+    font-size: var(--size-body-sm);
+    color: var(--text-secondary);
+    line-height: var(--leading-snug);
+}
+
+/* Facts table. Mono, tabular, aligned on a fixed key column so the three
+   spreads line up with each other. */
+.facts {
+    display: grid;
+    grid-template-columns: 68px minmax(0, 1fr);
+    column-gap: var(--space-3);
+    row-gap: var(--space-1);
+    font-family: var(--font-mono);
+    font-size: var(--size-mono-sm);
+    line-height: 1.6;
+    color: var(--text-muted);
+    border-top: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    padding: var(--space-3) 0;
+}
+
+.facts dt {
+    color: var(--text-muted);
+}
+
+.facts dd {
+    color: var(--text);
+    font-weight: 500;
+}
+
+/* ---- Artifact 1: the terminal transcript --------------------------- */
+
+.transcript {
+    padding: var(--space-5);
+    overflow-x: auto;
+}
+
+.transcript pre {
+    font-family: var(--font-mono);
+    font-size: var(--size-mono);
     line-height: 1.6;
     color: var(--text-secondary);
 }
 
-.project-tech {
+.transcript .dim {
+    color: var(--text-faint);
+}
+
+/* ---- Artifact 2: screenshots of the bot in Discord -------------------
+   Shown as captured. The Discord chrome around the embed is evidence, so
+   the frame gets a hard edge and nothing else. */
+
+.shot {
+    display: block;
+    width: 100%;
+    /* These are retina captures, so ~345 logical px is their native size.
+       Capping near that keeps them legible without letting them run away
+       with the page. */
+    max-width: 300px;
+    height: auto;
+    border: 1px solid var(--figure-border);
+}
+
+.shot + .shot {
+    margin-top: var(--space-3);
+}
+
+/* ---- Artifact 3: the document set ----------------------------------- */
+
+.documents {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--space-4);
+    padding: var(--space-5);
+}
+
+.document {
+    aspect-ratio: 8.5 / 11;
+    background: var(--figure-bg-inset);
+    border: 1px solid var(--figure-border);
+    padding: var(--space-3);
     display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
+    flex-direction: column;
+    font-family: var(--font-mono);
+    font-size: var(--size-mono-sm);
+    line-height: 1.5;
 }
 
-.tech-tag {
-    background: var(--glass-bg);
-    border: 1px solid rgba(166, 184, 218, 0.35);
-    color: var(--accent);
-    padding: 5px 12px;
-    border-radius: 20px;
-    font-size: 12px;
-    font-weight: 500;
-}
-
-.project-links {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px;
-    margin-top: 18px;
-}
-
-.project-links .project-link {
-    margin-top: 0;
-}
-
-.project-link {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
-    margin-top: 18px;
-    font-size: 14px;
-    font-weight: 600;
-    color: var(--accent);
-    transition: color 0.25s ease;
-}
-
-.project-link:hover {
-    color: var(--accent-strong);
-}
-
-.project-link:hover span {
-    text-decoration: underline;
-}
-
-a.project-card:hover .project-link:not(.project-link--report) {
-    color: var(--accent-strong);
-}
-
-a.project-card:hover .project-link:not(.project-link--report) span {
-    text-decoration: underline;
-}
-
-a.project-card:has(.project-link--report:hover) .project-link:not(.project-link--report) {
+.document-code {
     color: var(--accent);
 }
 
-a.project-card:has(.project-link--report:hover) .project-link:not(.project-link--report) span {
-    text-decoration: none;
+.document-name {
+    color: var(--text-muted);
+    margin-top: var(--space-1);
 }
 
-.project-link--report {
-    cursor: pointer;
-    position: relative;
-    z-index: 3;
+.document-pages {
+    color: var(--text);
+    margin-top: auto;
 }
 
-.project-link--private {
+/* Multi-figure spreads keep the same shape as every other project: figures
+   in the figure column, facts beside them. Two portrait screenshots sit
+   side by side; a landscape one spans the column, because at half width its
+   text would be too small to read. */
+
+.figures {
+    display: grid;
+    gap: var(--space-4);
+    align-items: start;
+}
+
+.figures--grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.artifact--span {
+    grid-column: 1 / -1;
+}
+
+/* Paired portrait figures render at an identical size so their tops and
+   bottoms line up. The crops differ by about half a percent in aspect, so
+   the taller one loses a few pixels of empty padding at the foot. */
+.figures--grid .artifact:not(.artifact--span) .shot {
+    aspect-ratio: 690 / 1215;
+    object-fit: cover;
+    object-position: top center;
+}
+
+.artifact--span .shot {
+    max-width: none;
+}
+
+/* The figure/facts split needs roughly 1150px of viewport before the
+   figure column gets too narrow to show anything. Below that the figure
+   takes the full width and the facts drop underneath. */
+@media (max-width: 1150px) {
+    .project-body,
+    .project--flip .project-body {
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: var(--space-4);
+    }
+
+    .project--flip .project-figure {
+        order: 0;
+    }
+
+    .project--flip .project-aside {
+        order: 0;
+    }
+}
+
+@media (max-width: 900px) {
+    .project {
+        grid-template-columns: minmax(0, 1fr);
+        padding-bottom: var(--space-7);
+    }
+
+    .project-numeral {
+        margin-bottom: var(--space-3);
+    }
+}
+
+@media (max-width: 560px) {
+    .figures--grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .transcript {
+        padding: var(--space-4);
+    }
+
+    .documents {
+        gap: var(--space-2);
+        padding: var(--space-4);
+    }
+
+    .document {
+        padding: var(--space-2);
+    }
+}
+
+/* Links under the facts table, set like the facts themselves. */
+.facts-links {
+    font-family: var(--font-mono);
+    font-size: var(--size-mono-sm);
     color: var(--text-muted);
 }
 
-.project-link--private:hover {
-    color: var(--text-muted);
-}
-
-.project-link--private:hover span {
-    text-decoration: none;
-}
-
-@media (max-width: 725px) {
-    .projects-grid {
-        gap: 18px;
-        padding: 24px 30px 28px;
-        -webkit-mask-image: linear-gradient(to right, transparent, black 30px, black calc(100% - 30px), transparent);
-        mask-image: linear-gradient(to right, transparent, black 30px, black calc(100% - 30px), transparent);
-    }
-
-    .project-card {
-        flex: 0 0 84vw;
-    }
+.projects {
+    margin-top: var(--space-6);
 }

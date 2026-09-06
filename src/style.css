@@ -1,12 +1,8 @@
+@import './styles/fonts.css';
 @import './styles/tokens.css';
 @import './styles/base.css';
-@import './styles/nav.css';
-@import './styles/glass.css';
-@import './styles/buttons.css';
-@import './styles/sections/hero.css';
+@import './styles/sidebar.css';
 @import './styles/sections/projects.css';
-@import './styles/sections/experience.css';
+@import './styles/sections/record.css';
 @import './styles/sections/skills.css';
-@import './styles/sections/contact.css';
 @import './styles/sections/resume.css';
-@import './styles/footer.css';
