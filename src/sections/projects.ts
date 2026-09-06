@@ -104,7 +104,7 @@ export function renderProjects(): string {
   return `
     <section id="projects" class="section">
       <h2 class="label">Projects</h2>
-      <p class="section-note">Three, newest first.</p>
+      <p class="section-note">Newest first. The first one is still running.</p>
       <div class="projects">${spreads}</div>
     </section>`;
 }
